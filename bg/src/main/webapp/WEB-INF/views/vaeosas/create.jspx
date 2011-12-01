@@ -11,12 +11,6 @@
         <field:select field="ylemused" id="c_ee_itcollege_bg_entities_Vaeosa_ylemused" itemLabel="kood" itemValue="ylemused" items="${vaeosas}" path="/vaeosas" z="user-managed"/>
         <field:select field="alluvad" id="c_ee_itcollege_bg_entities_Vaeosa_alluvad" itemLabel="kood" itemValue="alluvad" items="${vaeosas}" path="/vaeosas" z="user-managed"/>
         <field:select field="asukoht" id="c_ee_itcollege_bg_entities_Vaeosa_asukoht" itemValue="id" items="${riigiadminyksuses}" path="/riigiadminyksuses" z="n0B/dqESH14gNa9Vl50/GLkqIO0="/>
-        <field:textarea field="avaja" id="c_ee_itcollege_bg_entities_Vaeosa_avaja" z="ogUN2EOZzFpYMog4zOkNQcaxeBA="/>
-        <field:textarea field="muutja" id="c_ee_itcollege_bg_entities_Vaeosa_muutja" z="8fZ/SB6/4ZsGPppb9ZKIZ9Rik/E="/>
-        <field:textarea field="sulgeja" id="c_ee_itcollege_bg_entities_Vaeosa_sulgeja" z="kAgyC6knpgYKzDFIGJzk6tJ9BBE="/>
-        <field:datetime dateTimePattern="${vaeosa_avatud_date_format}" field="avatud" id="c_ee_itcollege_bg_entities_Vaeosa_avatud" z="hyyWIziOQRQWGa7EUXxnWseN+WM="/>
-        <field:datetime dateTimePattern="${vaeosa_muudetud_date_format}" field="muudetud" id="c_ee_itcollege_bg_entities_Vaeosa_muudetud" z="1/spxjcFb/AO6NXD4TZjNP2DpQI="/>
-        <field:datetime dateTimePattern="${vaeosa_suletud_date_format}" field="suletud" id="c_ee_itcollege_bg_entities_Vaeosa_suletud" z="sS5khlhoTqyRgbVJf4x7Lzy1EZ4="/>
     </form:create>
     <form:dependency dependencies="${dependencies}" id="d_ee_itcollege_bg_entities_Vaeosa" render="${not empty dependencies}" z="Ru0LwIaLy54q17ssz8Y98ZICQS8="/>
 </div>

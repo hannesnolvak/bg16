@@ -63,7 +63,7 @@ public class Piiripunkt extends BaseEntity {
     @NotNull
     private Number korgus_merepinnast;
 
-    public static List<Piiripunkt> find(String kp, String vaeosa) {
+    public static List<Piiripunkt> find(String vaeosa, String kp) {
         return entityManager().createQuery("SELECT o FROM Piiripunkt o", Piiripunkt.class).getResultList();
     }
 }

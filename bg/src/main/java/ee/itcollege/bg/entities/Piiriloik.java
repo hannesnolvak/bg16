@@ -42,7 +42,7 @@ public class Piiriloik extends BaseEntity {
     @NotNull
     private String GPS_koordinaadid;
     
-    public static List<Piiriloik> find(String kp, String vaeosa) {
+    public static List<Piiriloik> find(String vaeosa, String kp) {
         return entityManager().createQuery("SELECT o FROM Piiriloik o", Piiriloik.class).getResultList();
     }
 }

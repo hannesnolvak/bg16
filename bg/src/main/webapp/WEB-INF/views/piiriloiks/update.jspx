@@ -8,12 +8,6 @@
         <field:input field="kommentaar" id="c_ee_itcollege_bg_entities_Piiriloik_kommentaar" required="true" z="sa7vykFCsdeEVW9q8aTWMo6AjQ0="/>
         <field:input field="GPS_koordinaadid" id="c_ee_itcollege_bg_entities_Piiriloik_GPS_koordinaadid" required="true" z="5UOAAPVXPYxpMlsPqBsNhxvZbf4="/>
         <field:select field="haldaja" id="c_ee_itcollege_bg_entities_Piiriloik_haldaja" itemValue="id" items="${piiriloiguhaldajas}" path="/piiriloiguhaldajas" required="true" z="xcfCL0QHxS8ro1FlgJmBJtQorak="/>
-        <field:textarea field="avaja" id="c_ee_itcollege_bg_entities_Piiriloik_avaja" z="IZ2x2cK6D80OnhlV2l4Ppqi0pVA="/>
-        <field:textarea field="muutja" id="c_ee_itcollege_bg_entities_Piiriloik_muutja" z="XxeLM1Qd1Ck+CPd08VLllqOaYIM="/>
-        <field:textarea field="sulgeja" id="c_ee_itcollege_bg_entities_Piiriloik_sulgeja" z="7Me4fBTDp77uIRcsCvqatDfXpEM="/>
-        <field:datetime dateTimePattern="${piiriloik_avatud_date_format}" field="avatud" id="c_ee_itcollege_bg_entities_Piiriloik_avatud" z="6uxNa+MyH+mVxoMn75PvK3+pCDA="/>
-        <field:datetime dateTimePattern="${piiriloik_muudetud_date_format}" field="muudetud" id="c_ee_itcollege_bg_entities_Piiriloik_muudetud" z="oInJAhgvOzF02yXoRcQF4LEP0nI="/>
-        <field:datetime dateTimePattern="${piiriloik_suletud_date_format}" field="suletud" id="c_ee_itcollege_bg_entities_Piiriloik_suletud" z="K55VogZCnC935TtpH1kiqnjkv5E="/>
         <field:simple field="vahtkonnad" id="c_ee_itcollege_bg_entities_Piiriloik_vahtkonnad" messageCode="entity_reference_not_managed" messageCodeAttribute="Vahtkond Piiriloigul" z="GGjsMXMO3vlCtWJN3WsKdFtPEOs="/>
     </form:update>
 </div>

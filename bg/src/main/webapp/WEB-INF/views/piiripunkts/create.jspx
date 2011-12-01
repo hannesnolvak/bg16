@@ -12,12 +12,6 @@
         <field:input field="GPS_Latitude" id="c_ee_itcollege_bg_entities_Piiripunkt_GPS_Latitude" required="true" z="vOShhtnTMNxWZGyCKkpiE/Fhtn0="/>
         <field:input field="korgus_merepinnast" id="c_ee_itcollege_bg_entities_Piiripunkt_korgus_merepinnast" required="true" z="ybQVp4NMHIQK98b/x+ymnojwcOA="/>
         <field:select field="allub" id="c_ee_itcollege_bg_entities_Piiripunkt_allub" itemValue="id" items="${vaeosas}" path="/vaeosas" required="true" z="dajxgV/tEWZKMryvGG5gHg2AJo8="/>
-        <field:textarea field="avaja" id="c_ee_itcollege_bg_entities_Piiripunkt_avaja" z="gY5KFKKx0K8XStCLlm1Yndhk/n8="/>
-        <field:textarea field="muutja" id="c_ee_itcollege_bg_entities_Piiripunkt_muutja" z="lNKUN4Rcw06NSFWqttdKl/3GsGk="/>
-        <field:textarea field="sulgeja" id="c_ee_itcollege_bg_entities_Piiripunkt_sulgeja" z="5m57EVpxn/dKWIkZLTACnriyfKw="/>
-        <field:datetime dateTimePattern="${piiripunkt_avatud_date_format}" field="avatud" id="c_ee_itcollege_bg_entities_Piiripunkt_avatud" z="a4K5NMu6Pf1lDMezeNmTPvy1WZw="/>
-        <field:datetime dateTimePattern="${piiripunkt_muudetud_date_format}" field="muudetud" id="c_ee_itcollege_bg_entities_Piiripunkt_muudetud" z="7KXYcVovFApxZkCkIWfu8DB1jS4="/>
-        <field:datetime dateTimePattern="${piiripunkt_suletud_date_format}" field="suletud" id="c_ee_itcollege_bg_entities_Piiripunkt_suletud" z="ma561rSVi7CnB8cMWQ6r/c9oTKk="/>
         <field:simple field="vahtkonnad" id="c_ee_itcollege_bg_entities_Piiripunkt_vahtkonnad" messageCode="entity_reference_not_managed" messageCodeAttribute="Vahtkond" z="j5nTshul7236rfkTs+R/fTcmWjo="/>
     </form:create>
     <form:dependency dependencies="${dependencies}" id="d_ee_itcollege_bg_entities_Piiripunkt" render="${not empty dependencies}" z="YUCF+JRw7altvNDRoULn4n2Cdio="/>

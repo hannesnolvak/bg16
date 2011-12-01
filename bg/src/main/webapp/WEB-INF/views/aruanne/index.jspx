@@ -7,19 +7,23 @@
 	<table cellpadding="0" cellspacing="0">
 		<tr>
 			<th>Kuupäev<br />
-				<input type="text" name="kp" /></th>
+				<field:datetime dateTimePattern="yyyy-MM-dd" field="kp" id="c_ee_itcollege_bg_entities_aruanne_kp" required="true" z=""/></th>
 			<th>Väeosa<br />
+<!-- 
+			<field:select field="vaeosa" id="c_ee_itcollege_bg_entities_vaeosa" itemValue="kood" items="${vaeosad}" path="/vaeosas" z=""/>
+-->
 				<select name="vaeosa">
 				<c:forEach items="${vaeosad}" var="vaeosa">
 					<option value="${vaeosa.kood}" label="${vaeosa.kood}" />
 				</c:forEach>
-				</select></th>
+				</select>
+			</th>
 			<th><input type="submit" value="Värskenda!" /></th>
 		</tr>
 	</table>
 	</form>
 
-	<table cellpadding="0" cellspacing="0">
+	<table cellpadding="0" cellspacing="0" style="margin: 25px 0;">
 		<tr>
 			<th>Piirilõik</th>
 			<th>Vahtkondi</th>

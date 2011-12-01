@@ -24,7 +24,7 @@ public class AruandeController {
 			HttpServletResponse response) {
 
 		model.addAttribute("vaeosa", vaeosa);
-		model.addAttribute("kp", kp);
+		model.addAttribute("kp", kp == null ? "2011-11-11" : kp);
 
 		model.addAttribute("vaeosad", Vaeosa.findAllVaeosas());
 		model.addAttribute("piiriloigud", Piiriloik.find(vaeosa, kp));

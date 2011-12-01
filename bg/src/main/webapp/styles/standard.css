@@ -109,7 +109,7 @@ table.navigation {
 }
 
 label {
-	width:100px;
+	width:80px;
 	float:left;
 	margin-left: 5px;
 	margin-top: 0px;
@@ -371,3 +371,37 @@ fieldset th {
 	height: 11px;
 	width: 16px;
 }
+
+#vaeosa .left, #vaeosa .right
+{
+	width: 50%;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.submit
+{
+	text-align: right;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

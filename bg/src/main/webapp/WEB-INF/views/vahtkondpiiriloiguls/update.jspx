@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_ee_itcollege_bg_entities_VahtkondPiiriloigul" modelAttribute="vahtkondPiiriloigul" path="/vahtkondpiiriloiguls" versionField="Version" z="i2iaoE41e2TyS/Yjk8RtNqip4UE=">
+        <field:select field="vahtkond" id="c_ee_itcollege_bg_entities_VahtkondPiiriloigul_vahtkond" itemValue="id" items="${vahtkonds}" path="/vahtkonds" required="true" z="gWOjFzYIBwzTd2Asxil58mugGWE="/>
+        <field:select field="piiriloik" id="c_ee_itcollege_bg_entities_VahtkondPiiriloigul_piiriloik" itemValue="id" items="${piiriloiks}" path="/piiriloiks" required="true" z="USYQ4zaUv+7d7Kl1vRtYPJgu1Yg="/>
+        <field:input field="kommentaar" id="c_ee_itcollege_bg_entities_VahtkondPiiriloigul_kommentaar" required="true" z="fPUNPBHQubygpuCyUCa2k8QbU6Q="/>
+        <field:datetime dateTimePattern="${vahtkondPiiriloigul_alates_date_format}" field="alates" id="c_ee_itcollege_bg_entities_VahtkondPiiriloigul_alates" required="true" z="9WtgUrUS/eRCI+3QXZCZi9YWvAw="/>
+        <field:datetime dateTimePattern="${vahtkondPiiriloigul_kuni_date_format}" field="kuni" id="c_ee_itcollege_bg_entities_VahtkondPiiriloigul_kuni" required="true" z="MMBxbp+DK4TtY/0CRUUjd4gLxPQ="/>
+        <field:textarea field="avaja" id="c_ee_itcollege_bg_entities_VahtkondPiiriloigul_avaja" z="zO1Fc6uEz7JTjOX9XjtuoW/vJYM="/>
+        <field:textarea field="muutja" id="c_ee_itcollege_bg_entities_VahtkondPiiriloigul_muutja" z="wKmJyFti+UwIyO9hi217KAvVpj4="/>
+        <field:textarea field="sulgeja" id="c_ee_itcollege_bg_entities_VahtkondPiiriloigul_sulgeja" z="N/8ls3I2O2QwgYgGUSjxYwpnd0A="/>
+        <field:datetime dateTimePattern="${vahtkondPiiriloigul_avatud_date_format}" field="avatud" id="c_ee_itcollege_bg_entities_VahtkondPiiriloigul_avatud" z="UzVFMDu3KcocOnrEklQKCORM8ag="/>
+        <field:datetime dateTimePattern="${vahtkondPiiriloigul_muudetud_date_format}" field="muudetud" id="c_ee_itcollege_bg_entities_VahtkondPiiriloigul_muudetud" z="/mibmhkgdYnzUS6Z3z3x7YbApjQ="/>
+        <field:datetime dateTimePattern="${vahtkondPiiriloigul_suletud_date_format}" field="suletud" id="c_ee_itcollege_bg_entities_VahtkondPiiriloigul_suletud" z="bIXGkxSc/gWxRR69qYN8+ecFSkA="/>
+    </form:update>
+</div>

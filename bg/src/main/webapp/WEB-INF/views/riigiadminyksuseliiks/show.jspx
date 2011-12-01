@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_ee_itcollege_bg_entities_RiigiAdminYksuseLiik" object="${riigiadminyksuseliik}" path="/riigiadminyksuseliiks" z="hC4X3VjVxHknn0SGTsyPhRCWQzc=">
+        <field:display field="kommentaar" id="s_ee_itcollege_bg_entities_RiigiAdminYksuseLiik_kommentaar" object="${riigiadminyksuseliik}" z="KuDApREnGqDfSDssnHQgMqdiBFc="/>
+        <field:display field="kood" id="s_ee_itcollege_bg_entities_RiigiAdminYksuseLiik_kood" object="${riigiadminyksuseliik}" z="cKqB1E5MZaACCXjprIpnDMNYufQ="/>
+        <field:display field="nimetus" id="s_ee_itcollege_bg_entities_RiigiAdminYksuseLiik_nimetus" object="${riigiadminyksuseliik}" z="YxN92sN7y/KMeUejKc2keKXg2Ck="/>
+        <field:display date="true" dateTimePattern="${riigiAdminYksuseLiik_alates_date_format}" field="alates" id="s_ee_itcollege_bg_entities_RiigiAdminYksuseLiik_alates" object="${riigiadminyksuseliik}" z="dVHwz4UaeNOivZSWN7/8FzX9Ieg="/>
+        <field:display date="true" dateTimePattern="${riigiAdminYksuseLiik_kuni_date_format}" field="kuni" id="s_ee_itcollege_bg_entities_RiigiAdminYksuseLiik_kuni" object="${riigiadminyksuseliik}" z="V7ILTA7V+hoYFWRjUaw8SZHv1G0="/>
+        <field:display field="avaja" id="s_ee_itcollege_bg_entities_RiigiAdminYksuseLiik_avaja" object="${riigiadminyksuseliik}" z="jiHtb43/kivL8rxqaOR1sh7Dn4s="/>
+        <field:display field="muutja" id="s_ee_itcollege_bg_entities_RiigiAdminYksuseLiik_muutja" object="${riigiadminyksuseliik}" z="05lRE6i4uLeaZPJc9kXRAmi9kW8="/>
+        <field:display field="sulgeja" id="s_ee_itcollege_bg_entities_RiigiAdminYksuseLiik_sulgeja" object="${riigiadminyksuseliik}" z="l4QEsVUFLl3gXvchYeRmvGB8+Iw="/>
+        <field:display date="true" dateTimePattern="${riigiAdminYksuseLiik_avatud_date_format}" field="avatud" id="s_ee_itcollege_bg_entities_RiigiAdminYksuseLiik_avatud" object="${riigiadminyksuseliik}" z="1Y0kE+oU/qp2iM5PdktWCZ5wnHg="/>
+        <field:display date="true" dateTimePattern="${riigiAdminYksuseLiik_muudetud_date_format}" field="muudetud" id="s_ee_itcollege_bg_entities_RiigiAdminYksuseLiik_muudetud" object="${riigiadminyksuseliik}" z="mQvNpX9BLRnEutIW0JsFIkWVHSo="/>
+        <field:display date="true" dateTimePattern="${riigiAdminYksuseLiik_suletud_date_format}" field="suletud" id="s_ee_itcollege_bg_entities_RiigiAdminYksuseLiik_suletud" object="${riigiadminyksuseliik}" z="UdCV50UWeBXGYRwgDCklL8ObyAo="/>
+    </page:show>
+</div>

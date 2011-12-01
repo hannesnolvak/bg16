@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_ee_itcollege_bg_entities_VahtkondPiiriloigul" items="${vahtkondpiiriloiguls}" z="JyCmzCZaZ5E1S2E2FRVf1cHKTFw=">
+        <table:table data="${vahtkondpiiriloiguls}" id="l_ee_itcollege_bg_entities_VahtkondPiiriloigul" path="/vahtkondpiiriloiguls" z="dTBNhwPVukBJePufO70/6Q/YEFQ=">
+            <table:column id="c_ee_itcollege_bg_entities_VahtkondPiiriloigul_avaja" property="avaja" z="UCtOQe9qhoHn8shUecyEQWqXrAc="/>
+            <table:column id="c_ee_itcollege_bg_entities_VahtkondPiiriloigul_muutja" property="muutja" z="fxE/1oiKyOC51vjkOvBrVsopC8U="/>
+            <table:column id="c_ee_itcollege_bg_entities_VahtkondPiiriloigul_sulgeja" property="sulgeja" z="ApjC3MlsrfDsrntVn1zHCYRaO64="/>
+            <table:column date="true" dateTimePattern="${vahtkondPiiriloigul_avatud_date_format}" id="c_ee_itcollege_bg_entities_VahtkondPiiriloigul_avatud" property="avatud" z="jjCc1liTXZwGhcCbQXT6XFgzTck="/>
+            <table:column date="true" dateTimePattern="${vahtkondPiiriloigul_muudetud_date_format}" id="c_ee_itcollege_bg_entities_VahtkondPiiriloigul_muudetud" property="muudetud" z="m8MTE+Ob0yUpvKWQB6rQHdy2D2I="/>
+            <table:column date="true" dateTimePattern="${vahtkondPiiriloigul_suletud_date_format}" id="c_ee_itcollege_bg_entities_VahtkondPiiriloigul_suletud" property="suletud" z="8xqk4aHxeCRSfBc4ESnl7kuS8mA="/>
+        </table:table>
+    </page:list>
+</div>

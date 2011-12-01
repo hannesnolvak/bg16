@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_ee_itcollege_bg_entities_Piiriloik" object="${piiriloik}" path="/piiriloiks" z="Q1LKH1JS0BsgUP4U/r2z806EzUo=">
+        <field:display field="kood" id="s_ee_itcollege_bg_entities_Piiriloik_kood" object="${piiriloik}" z="rFzrQ0WQMpEa7Rzo+j3hyLtJemg="/>
+        <field:display field="nimetus" id="s_ee_itcollege_bg_entities_Piiriloik_nimetus" object="${piiriloik}" z="g5aT8F5E1cY8biS9wXEQRjcQiII="/>
+        <field:display field="kommentaar" id="s_ee_itcollege_bg_entities_Piiriloik_kommentaar" object="${piiriloik}" z="KD52F0j8Ki5p+BbDJqQEInMMB8I="/>
+        <field:display field="GPS_koordinaadid" id="s_ee_itcollege_bg_entities_Piiriloik_GPS_koordinaadid" object="${piiriloik}" z="evo3QSIK066rjQchaZsqviq+BAc="/>
+        <field:display field="haldaja" id="s_ee_itcollege_bg_entities_Piiriloik_haldaja" object="${piiriloik}" z="MSRjm4MGUG9aAbCIDjStS2oNock="/>
+        <field:display field="avaja" id="s_ee_itcollege_bg_entities_Piiriloik_avaja" object="${piiriloik}" z="4wZUq9cCL07d0wiVpE/Wi6BO6nQ="/>
+        <field:display field="muutja" id="s_ee_itcollege_bg_entities_Piiriloik_muutja" object="${piiriloik}" z="EIQVGDPABG/LkgJqNdLxPBebruU="/>
+        <field:display field="sulgeja" id="s_ee_itcollege_bg_entities_Piiriloik_sulgeja" object="${piiriloik}" z="k1bMQpdQD8EWkScWDL3rZ2UVJbo="/>
+        <field:display date="true" dateTimePattern="${piiriloik_avatud_date_format}" field="avatud" id="s_ee_itcollege_bg_entities_Piiriloik_avatud" object="${piiriloik}" z="7zLbRMveJ+zNzDnWHSyBCzYi2vw="/>
+        <field:display date="true" dateTimePattern="${piiriloik_muudetud_date_format}" field="muudetud" id="s_ee_itcollege_bg_entities_Piiriloik_muudetud" object="${piiriloik}" z="GHkFmYIobmnmyyG/hyw4BqNrLco="/>
+        <field:display date="true" dateTimePattern="${piiriloik_suletud_date_format}" field="suletud" id="s_ee_itcollege_bg_entities_Piiriloik_suletud" object="${piiriloik}" z="EOtVKxjfc1SBmZtJ6hIJDUCCuNc="/>
+    </page:show>
+</div>

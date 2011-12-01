@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN" "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+<tiles-definitions>
+    <definition extends="default" name="vahtkonnadpiiriloigul/list">
+        <put-attribute name="body" value="/WEB-INF/views/vahtkonnadpiiriloigul/list.jspx"/>
+    </definition>
+<definition extends="default" name="vahtkonnadpiiriloigul/show">
+        <put-attribute name="body" value="/WEB-INF/views/vahtkonnadpiiriloigul/show.jspx"/>
+    </definition>
+<definition extends="default" name="vahtkonnadpiiriloigul/create">
+        <put-attribute name="body" value="/WEB-INF/views/vahtkonnadpiiriloigul/create.jspx"/>
+    </definition>
+<definition extends="default" name="vahtkonnadpiiriloigul/update">
+        <put-attribute name="body" value="/WEB-INF/views/vahtkonnadpiiriloigul/update.jspx"/>
+    </definition>
+<definition extends="default" name="vahtkondpiiriloiguls/list">
+        <put-attribute name="body" value="/WEB-INF/views/vahtkondpiiriloiguls/list.jspx"/>
+    </definition>
+<definition extends="default" name="vahtkondpiiriloiguls/show">
+        <put-attribute name="body" value="/WEB-INF/views/vahtkondpiiriloiguls/show.jspx"/>
+    </definition>
+<definition extends="default" name="vahtkondpiiriloiguls/create">
+        <put-attribute name="body" value="/WEB-INF/views/vahtkondpiiriloiguls/create.jspx"/>
+    </definition>
+<definition extends="default" name="vahtkondpiiriloiguls/update">
+        <put-attribute name="body" value="/WEB-INF/views/vahtkondpiiriloiguls/update.jspx"/>
+    </definition>
+</tiles-definitions>

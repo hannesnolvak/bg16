@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_ee_itcollege_bg_entities_Piiriloik" items="${piiriloiks}" z="2fLSEJ++FrsoxFij3le9OEGb6pk=">
+        <table:table data="${piiriloiks}" id="l_ee_itcollege_bg_entities_Piiriloik" path="/piiriloiks" z="9zHTY1vChHPE0lP+Z48SnZUQZ2o=">
+            <table:column id="c_ee_itcollege_bg_entities_Piiriloik_avaja" property="avaja" z="lmwF8GamzegrpUEWCP7FQ0Qj3eU="/>
+            <table:column id="c_ee_itcollege_bg_entities_Piiriloik_muutja" property="muutja" z="lgQnlUtC0BNcXNEEfDkQSwNKSdw="/>
+            <table:column id="c_ee_itcollege_bg_entities_Piiriloik_sulgeja" property="sulgeja" z="p5w2MvCPQYAYquwvkTARx8ujH6Y="/>
+            <table:column date="true" dateTimePattern="${piiriloik_avatud_date_format}" id="c_ee_itcollege_bg_entities_Piiriloik_avatud" property="avatud" z="XSdb1pZe96w/65Y6km3a40fsI54="/>
+            <table:column date="true" dateTimePattern="${piiriloik_muudetud_date_format}" id="c_ee_itcollege_bg_entities_Piiriloik_muudetud" property="muudetud" z="MIqNid7e3UMg2Cr7ocyOqCVUFE4="/>
+            <table:column date="true" dateTimePattern="${piiriloik_suletud_date_format}" id="c_ee_itcollege_bg_entities_Piiriloik_suletud" property="suletud" z="F7d1QvTEOqeAGbkJbUf1je/DuCU="/>
+        </table:table>
+    </page:list>
+</div>

@@ -30,7 +30,7 @@ public class Vaeosa extends BaseEntity {
 	@ManyToOne
     @JoinColumn(name="riigi_admin_yksus_ID")
     private RiigiAdminYksus asukoht;
-	
+
     @NotNull
     @Size(max = 20)
     private String kood;

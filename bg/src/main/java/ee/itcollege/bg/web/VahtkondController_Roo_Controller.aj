@@ -3,120 +3,23 @@
 
 package ee.itcollege.bg.web;
 
-import ee.itcollege.bg.entities.Piiripunkt;
-import ee.itcollege.bg.entities.Vaeosa;
 import ee.itcollege.bg.entities.Vahtkond;
 import java.io.UnsupportedEncodingException;
-import java.lang.Integer;
-import java.lang.Long;
 import java.lang.String;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.List;
 import javax.servlet.http.HttpServletRequest;
-import javax.validation.Valid;
 import org.springframework.ui.Model;
-import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.util.UriUtils;
 import org.springframework.web.util.WebUtils;
 
 privileged aspect VahtkondController_Roo_Controller {
     
-    @RequestMapping(method = RequestMethod.POST)
-    public String VahtkondController.create(@Valid Vahtkond vahtkond, BindingResult bindingResult, Model uiModel, HttpServletRequest httpServletRequest) {
-        if (bindingResult.hasErrors()) {
-            uiModel.addAttribute("vahtkond", vahtkond);
-            addDateTimeFormatPatterns(uiModel);
-            return "vahtkonds/create";
-        }
-        uiModel.asMap().clear();
-        vahtkond.persist();
-        return "redirect:/vahtkonds/" + encodeUrlPathSegment(vahtkond.getId().toString(), httpServletRequest);
-    }
-    
     @RequestMapping(params = "form", method = RequestMethod.GET)
     public String VahtkondController.createForm(Model uiModel) {
         uiModel.addAttribute("vahtkond", new Vahtkond());
         addDateTimeFormatPatterns(uiModel);
-        List dependencies = new ArrayList();
-        if (Piiripunkt.countPiiripunkts() == 0) {
-            dependencies.add(new String[]{"piiripunkt", "piiripunkts"});
-        }
-        if (Vaeosa.countVaeosas() == 0) {
-            dependencies.add(new String[]{"vaeosa", "vaeosas"});
-        }
-        uiModel.addAttribute("dependencies", dependencies);
         return "vahtkonds/create";
-    }
-    
-    @RequestMapping(value = "/{id}", method = RequestMethod.GET)
-    public String VahtkondController.show(@PathVariable("id") Long id, Model uiModel) {
-        addDateTimeFormatPatterns(uiModel);
-        uiModel.addAttribute("vahtkond", Vahtkond.findVahtkond(id));
-        uiModel.addAttribute("itemId", id);
-        return "vahtkonds/show";
-    }
-    
-    @RequestMapping(method = RequestMethod.GET)
-    public String VahtkondController.list(@RequestParam(value = "page", required = false) Integer page, @RequestParam(value = "size", required = false) Integer size, Model uiModel) {
-        if (page != null || size != null) {
-            int sizeNo = size == null ? 10 : size.intValue();
-            uiModel.addAttribute("vahtkonds", Vahtkond.findVahtkondEntries(page == null ? 0 : (page.intValue() - 1) * sizeNo, sizeNo));
-            float nrOfPages = (float) Vahtkond.countVahtkonds() / sizeNo;
-            uiModel.addAttribute("maxPages", (int) ((nrOfPages > (int) nrOfPages || nrOfPages == 0.0) ? nrOfPages + 1 : nrOfPages));
-        } else {
-            uiModel.addAttribute("vahtkonds", Vahtkond.findAllVahtkonds());
-        }
-        addDateTimeFormatPatterns(uiModel);
-        return "vahtkonds/list";
-    }
-    
-    @RequestMapping(method = RequestMethod.PUT)
-    public String VahtkondController.update(@Valid Vahtkond vahtkond, BindingResult bindingResult, Model uiModel, HttpServletRequest httpServletRequest) {
-        if (bindingResult.hasErrors()) {
-            uiModel.addAttribute("vahtkond", vahtkond);
-            addDateTimeFormatPatterns(uiModel);
-            return "vahtkonds/update";
-        }
-        uiModel.asMap().clear();
-        vahtkond.merge();
-        return "redirect:/vahtkonds/" + encodeUrlPathSegment(vahtkond.getId().toString(), httpServletRequest);
-    }
-    
-    @RequestMapping(value = "/{id}", params = "form", method = RequestMethod.GET)
-    public String VahtkondController.updateForm(@PathVariable("id") Long id, Model uiModel) {
-        uiModel.addAttribute("vahtkond", Vahtkond.findVahtkond(id));
-        addDateTimeFormatPatterns(uiModel);
-        return "vahtkonds/update";
-    }
-    
-    @RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
-    public String VahtkondController.delete(@PathVariable("id") Long id, @RequestParam(value = "page", required = false) Integer page, @RequestParam(value = "size", required = false) Integer size, Model uiModel) {
-        Vahtkond.findVahtkond(id).remove();
-        uiModel.asMap().clear();
-        uiModel.addAttribute("page", (page == null) ? "1" : page.toString());
-        uiModel.addAttribute("size", (size == null) ? "10" : size.toString());
-        return "redirect:/vahtkonds";
-    }
-    
-    @ModelAttribute("piiripunkts")
-    public Collection<Piiripunkt> VahtkondController.populatePiiripunkts() {
-        return Piiripunkt.findAllPiiripunkts();
-    }
-    
-    @ModelAttribute("vaeosas")
-    public Collection<Vaeosa> VahtkondController.populateVaeosas() {
-        return Vaeosa.findAllVaeosas();
-    }
-    
-    @ModelAttribute("vahtkonds")
-    public Collection<Vahtkond> VahtkondController.populateVahtkonds() {
-        return Vahtkond.findAllVahtkonds();
     }
     
     void VahtkondController.addDateTimeFormatPatterns(Model uiModel) {

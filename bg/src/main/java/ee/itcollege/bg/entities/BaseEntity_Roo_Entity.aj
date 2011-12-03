@@ -21,11 +21,6 @@ privileged aspect BaseEntity_Roo_Entity {
     @PersistenceContext
     transient EntityManager BaseEntity.entityManager;
     
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "id")
-    private Long BaseEntity.id;
-    
     @Version
     @Column(name = "version")
     private Integer BaseEntity.version;

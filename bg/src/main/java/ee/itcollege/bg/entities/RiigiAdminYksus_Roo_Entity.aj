@@ -4,66 +4,13 @@
 package ee.itcollege.bg.entities;
 
 import ee.itcollege.bg.entities.RiigiAdminYksus;
-import java.lang.Integer;
 import java.lang.Long;
 import java.util.List;
-import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
-import javax.persistence.Version;
-import org.springframework.transaction.annotation.Transactional;
 
 privileged aspect RiigiAdminYksus_Roo_Entity {
     
     declare @type: RiigiAdminYksus: @Entity;
-    
-    @PersistenceContext
-    transient EntityManager RiigiAdminYksus.entityManager;
-    
-    @Version
-    @Column(name = "version")
-    private Integer RiigiAdminYksus.version;
-    
-    public Long RiigiAdminYksus.getId() {
-        return this.id;
-    }
-    
-    public void RiigiAdminYksus.setId(Long id) {
-        this.id = id;
-    }
-    
-    public Integer RiigiAdminYksus.getVersion() {
-        return this.version;
-    }
-    
-    public void RiigiAdminYksus.setVersion(Integer version) {
-        this.version = version;
-    }
-    
-    @Transactional
-    public void RiigiAdminYksus.persist() {
-        if (this.entityManager == null) this.entityManager = entityManager();
-        this.entityManager.persist(this);
-    }
-    
-    @Transactional
-    public void RiigiAdminYksus.flush() {
-        if (this.entityManager == null) this.entityManager = entityManager();
-        this.entityManager.flush();
-    }
-    
-    @Transactional
-    public void RiigiAdminYksus.clear() {
-        if (this.entityManager == null) this.entityManager = entityManager();
-        this.entityManager.clear();
-    }
-    
-    public static final EntityManager RiigiAdminYksus.entityManager() {
-        EntityManager em = new RiigiAdminYksus().entityManager;
-        if (em == null) throw new IllegalStateException("Entity manager has not been injected (is the Spring Aspects JAR configured as an AJC/AJDT aspects library?)");
-        return em;
-    }
     
     public static long RiigiAdminYksus.countRiigiAdminYksuses() {
         return entityManager().createQuery("SELECT COUNT(o) FROM RiigiAdminYksus o", Long.class).getSingleResult();

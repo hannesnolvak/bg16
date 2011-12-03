@@ -4,66 +4,13 @@
 package ee.itcollege.bg.entities;
 
 import ee.itcollege.bg.entities.PiiriloiguHaldaja;
-import java.lang.Integer;
 import java.lang.Long;
 import java.util.List;
-import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
-import javax.persistence.Version;
-import org.springframework.transaction.annotation.Transactional;
 
 privileged aspect PiiriloiguHaldaja_Roo_Entity {
     
     declare @type: PiiriloiguHaldaja: @Entity;
-    
-    @PersistenceContext
-    transient EntityManager PiiriloiguHaldaja.entityManager;
-    
-    @Version
-    @Column(name = "version")
-    private Integer PiiriloiguHaldaja.version;
-    
-    public Long PiiriloiguHaldaja.getId() {
-        return this.id;
-    }
-    
-    public void PiiriloiguHaldaja.setId(Long id) {
-        this.id = id;
-    }
-    
-    public Integer PiiriloiguHaldaja.getVersion() {
-        return this.version;
-    }
-    
-    public void PiiriloiguHaldaja.setVersion(Integer version) {
-        this.version = version;
-    }
-    
-    @Transactional
-    public void PiiriloiguHaldaja.persist() {
-        if (this.entityManager == null) this.entityManager = entityManager();
-        this.entityManager.persist(this);
-    }
-    
-    @Transactional
-    public void PiiriloiguHaldaja.flush() {
-        if (this.entityManager == null) this.entityManager = entityManager();
-        this.entityManager.flush();
-    }
-    
-    @Transactional
-    public void PiiriloiguHaldaja.clear() {
-        if (this.entityManager == null) this.entityManager = entityManager();
-        this.entityManager.clear();
-    }
-    
-    public static final EntityManager PiiriloiguHaldaja.entityManager() {
-        EntityManager em = new PiiriloiguHaldaja().entityManager;
-        if (em == null) throw new IllegalStateException("Entity manager has not been injected (is the Spring Aspects JAR configured as an AJC/AJDT aspects library?)");
-        return em;
-    }
     
     public static long PiiriloiguHaldaja.countPiiriloiguHaldajas() {
         return entityManager().createQuery("SELECT COUNT(o) FROM PiiriloiguHaldaja o", Long.class).getSingleResult();

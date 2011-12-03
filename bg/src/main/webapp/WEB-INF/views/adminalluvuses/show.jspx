@@ -3,10 +3,10 @@
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
     <page:show id="ps_ee_itcollege_bg_entities_AdminAlluvus" object="${adminalluvus}" path="/adminalluvuses" z="mOuCpFetr05r6iBUe0pGz8AuRFI=">
-        <field:display field="alluv" id="s_ee_itcollege_bg_entities_AdminAlluvus_alluv" object="${adminalluvus}" z="vYVmxmex5+3H1ftcct7uOUoolB8="/>
         <field:display field="kommentaar" id="s_ee_itcollege_bg_entities_AdminAlluvus_kommentaar" object="${adminalluvus}" z="Wakd6Om2A7v8KC2Jp1TW36Qe9CE="/>
         <field:display date="true" dateTimePattern="${adminAlluvus_alates_date_format}" field="alates" id="s_ee_itcollege_bg_entities_AdminAlluvus_alates" object="${adminalluvus}" z="SKahhxTV01QHV6cB+a0xmxrxTJE="/>
         <field:display date="true" dateTimePattern="${adminAlluvus_kuni_date_format}" field="kuni" id="s_ee_itcollege_bg_entities_AdminAlluvus_kuni" object="${adminalluvus}" z="Q66478bVykoUhDkIp8qq3G6IDUI="/>
+        <field:display field="alluv" id="s_ee_itcollege_bg_entities_AdminAlluvus_alluv" object="${adminalluvus}" z="vYVmxmex5+3H1ftcct7uOUoolB8="/>
         <field:display field="ylem" id="s_ee_itcollege_bg_entities_AdminAlluvus_ylem" object="${adminalluvus}" z="0gwvD9FGB579VwbZeY4abwUehLg="/>
     </page:show>
 </div>

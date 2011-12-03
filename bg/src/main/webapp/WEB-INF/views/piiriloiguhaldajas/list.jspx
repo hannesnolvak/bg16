@@ -4,12 +4,12 @@
     <jsp:output omit-xml-declaration="yes"/>
     <page:list id="pl_ee_itcollege_bg_entities_PiiriloiguHaldaja" items="${piiriloiguhaldajas}" z="U2VGCHT013n/QpQcqt1Qh2zRmXs=">
         <table:table data="${piiriloiguhaldajas}" id="l_ee_itcollege_bg_entities_PiiriloiguHaldaja" path="/piiriloiguhaldajas" z="YoIFWU0oCz1fphjxpTcl7Jju71Q=">
-            <table:column id="c_ee_itcollege_bg_entities_PiiriloiguHaldaja_avaja" property="avaja" z="S9Eh0rMdn/oS1PkdQ/maFcJ8Nc0="/>
-            <table:column id="c_ee_itcollege_bg_entities_PiiriloiguHaldaja_muutja" property="muutja" z="4fR+BlTov6S7/u6YeN3LKvfOG6Y="/>
-            <table:column id="c_ee_itcollege_bg_entities_PiiriloiguHaldaja_sulgeja" property="sulgeja" z="9+dPl7cI+vkNV4VMSmUkFLm29gU="/>
-            <table:column date="true" dateTimePattern="${piiriloiguHaldaja_avatud_date_format}" id="c_ee_itcollege_bg_entities_PiiriloiguHaldaja_avatud" property="avatud" z="PREXp7BJ4cMgk/i1lc0ctvSgWIg="/>
-            <table:column date="true" dateTimePattern="${piiriloiguHaldaja_muudetud_date_format}" id="c_ee_itcollege_bg_entities_PiiriloiguHaldaja_muudetud" property="muudetud" z="dpY16CxT1Z4j5fiXdzaGlYv6Rvg="/>
-            <table:column date="true" dateTimePattern="${piiriloiguHaldaja_suletud_date_format}" id="c_ee_itcollege_bg_entities_PiiriloiguHaldaja_suletud" property="suletud" z="R/P1PkFXmwc4AtbQ2UTH1WLEh8g="/>
+            <table:column id="c_ee_itcollege_bg_entities_PiiriloiguHaldaja_piiriloik" property="piiriloik" z="hCxWy710zVgsn2VHyJgNnqKw7lM="/>
+            <table:column id="c_ee_itcollege_bg_entities_PiiriloiguHaldaja_piiripunkt" property="piiripunkt" z="BuCYd2IKSfq6cOqwb6iHWeaz530="/>
+            <table:column id="c_ee_itcollege_bg_entities_PiiriloiguHaldaja_vaeosa" property="vaeosa" z="PEx8AN7i9VV95XqyXAVO0jj1e0o="/>
+            <table:column id="c_ee_itcollege_bg_entities_PiiriloiguHaldaja_kommentaar" property="kommentaar" z="juiS1wlN5Rx7bOPxKAsDBNymYlY="/>
+            <table:column date="true" dateTimePattern="${piiriloiguHaldaja_alates_date_format}" id="c_ee_itcollege_bg_entities_PiiriloiguHaldaja_alates" property="alates" z="uYHoExCfgB1bfuL4+tzxSXz0cvE="/>
+            <table:column date="true" dateTimePattern="${piiriloiguHaldaja_kuni_date_format}" id="c_ee_itcollege_bg_entities_PiiriloiguHaldaja_kuni" property="kuni" z="aCYptchS5doI3fFaCN0xtNI6mvw="/>
         </table:table>
     </page:list>
 </div>

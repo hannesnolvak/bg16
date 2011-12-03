@@ -5,10 +5,10 @@
     <page:list id="pl_ee_itcollege_bg_entities_VaeosaAlluvus" items="${vaeosaalluvuses}" z="zINn04ox3bdAJ0eENfmg2qNCC5w=">
         <table:table data="${vaeosaalluvuses}" id="l_ee_itcollege_bg_entities_VaeosaAlluvus" path="/vaeosaalluvuses" z="X6Ei/zk+Olh1phSZA1GoNGB/ZdQ=">
             <table:column id="c_ee_itcollege_bg_entities_VaeosaAlluvus_alluv" property="alluv" z="8obtc4R7NNv0Pq4xDWM1k9G+jho="/>
-            <table:column id="c_ee_itcollege_bg_entities_VaeosaAlluvus_ylem" property="ylem" z="IcS9b6VXYtLWfZhuYuSTJeeNTAI="/>
             <table:column id="c_ee_itcollege_bg_entities_VaeosaAlluvus_kommentaar" property="kommentaar" z="A6BvldoGxA8AhbtNHRvxTtWBq58="/>
             <table:column date="true" dateTimePattern="${vaeosaAlluvus_alates_date_format}" id="c_ee_itcollege_bg_entities_VaeosaAlluvus_alates" property="alates" z="GcUydXG1677q89RRFtqH1TXnK10="/>
             <table:column date="true" dateTimePattern="${vaeosaAlluvus_kuni_date_format}" id="c_ee_itcollege_bg_entities_VaeosaAlluvus_kuni" property="kuni" z="kwA9knVtYMOcmPQ1VPr8mUFENF4="/>
+            <table:column id="c_ee_itcollege_bg_entities_VaeosaAlluvus_ylem" property="ylem" z="IcS9b6VXYtLWfZhuYuSTJeeNTAI="/>
         </table:table>
     </page:list>
 </div>

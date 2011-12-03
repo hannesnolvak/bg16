@@ -4,12 +4,12 @@
     <jsp:output omit-xml-declaration="yes"/>
     <page:list id="pl_ee_itcollege_bg_entities_Vahtkond" items="${vahtkonds}" z="7TgbR+uPEe9JqiIwySp3jZcJKSM=">
         <table:table data="${vahtkonds}" id="l_ee_itcollege_bg_entities_Vahtkond" path="/vahtkonds" z="37+iApKJvtOEmkqAPCK7I3WfPEM=">
-            <table:column id="c_ee_itcollege_bg_entities_Vahtkond_avaja" property="avaja" z="5lYW9BXBw4sA6wChZkmdqyt9veE="/>
-            <table:column id="c_ee_itcollege_bg_entities_Vahtkond_muutja" property="muutja" z="C9v2K3UATDcgrc+NSCLdU30fI7c="/>
-            <table:column id="c_ee_itcollege_bg_entities_Vahtkond_sulgeja" property="sulgeja" z="UqL00fh7VlymQEYZon5Z+4mz/GY="/>
-            <table:column date="true" dateTimePattern="${vahtkond_avatud_date_format}" id="c_ee_itcollege_bg_entities_Vahtkond_avatud" property="avatud" z="coz2/fRdFP5rKT67OKGInHuhls8="/>
-            <table:column date="true" dateTimePattern="${vahtkond_muudetud_date_format}" id="c_ee_itcollege_bg_entities_Vahtkond_muudetud" property="muudetud" z="JNiVoEvrYY59cFcfsTDRyHtns1c="/>
-            <table:column date="true" dateTimePattern="${vahtkond_suletud_date_format}" id="c_ee_itcollege_bg_entities_Vahtkond_suletud" property="suletud" z="5UK0FXH8PYwJX+fSLYT/S0pc5E8="/>
+            <table:column id="c_ee_itcollege_bg_entities_Vahtkond_piiripunkt" property="piiripunkt" z="RKDZrwwbvRHIKSQKeD5MYhwrDso="/>
+            <table:column id="c_ee_itcollege_bg_entities_Vahtkond_vaeosa" property="vaeosa" z="QzxVnO4YzXUylxbgyKWoJ7VZKv4="/>
+            <table:column id="c_ee_itcollege_bg_entities_Vahtkond_kood" property="kood" z="qoY/YVcZ9puI3USirHKrbfXqQgY="/>
+            <table:column id="c_ee_itcollege_bg_entities_Vahtkond_nimetus" property="nimetus" z="d05LL0+fnTnZ9mn416mgomuqayY="/>
+            <table:column id="c_ee_itcollege_bg_entities_Vahtkond_kommentaar" property="kommentaar" z="O8+MrQv/CVWSSWFbNRdgLipST0U="/>
+            <table:column date="true" dateTimePattern="${vahtkond_alates_date_format}" id="c_ee_itcollege_bg_entities_Vahtkond_alates" property="alates" z="WD1zkaD8HtY2IJuCopiGE0FOSws="/>
         </table:table>
     </page:list>
 </div>

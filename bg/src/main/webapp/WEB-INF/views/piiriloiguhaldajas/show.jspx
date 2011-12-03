@@ -9,11 +9,5 @@
         <field:display field="vaeosa" id="s_ee_itcollege_bg_entities_PiiriloiguHaldaja_vaeosa" object="${piiriloiguhaldaja}" z="iF/42X4Z2DddC4MAL5Pck9hxxPY="/>
         <field:display date="true" dateTimePattern="${piiriloiguHaldaja_alates_date_format}" field="alates" id="s_ee_itcollege_bg_entities_PiiriloiguHaldaja_alates" object="${piiriloiguhaldaja}" z="zygKey5EiDfgfBLyRe6iZsCv+X4="/>
         <field:display date="true" dateTimePattern="${piiriloiguHaldaja_kuni_date_format}" field="kuni" id="s_ee_itcollege_bg_entities_PiiriloiguHaldaja_kuni" object="${piiriloiguhaldaja}" z="O01SXMi5f6Twz+GrCjXSllrhmtQ="/>
-        <field:display field="avaja" id="s_ee_itcollege_bg_entities_PiiriloiguHaldaja_avaja" object="${piiriloiguhaldaja}" z="lJ5KOQUYswqbJutGh8u0lrVa0Ig="/>
-        <field:display field="muutja" id="s_ee_itcollege_bg_entities_PiiriloiguHaldaja_muutja" object="${piiriloiguhaldaja}" z="LdsbKn6Yy7p8/n2oqeoxZFDNzXE="/>
-        <field:display field="sulgeja" id="s_ee_itcollege_bg_entities_PiiriloiguHaldaja_sulgeja" object="${piiriloiguhaldaja}" z="wewgi/3mfOrX0vDsBBvXWzbgTH4="/>
-        <field:display date="true" dateTimePattern="${piiriloiguHaldaja_avatud_date_format}" field="avatud" id="s_ee_itcollege_bg_entities_PiiriloiguHaldaja_avatud" object="${piiriloiguhaldaja}" z="oz/yD2oVuAbS++GOggHJczt/ogg="/>
-        <field:display date="true" dateTimePattern="${piiriloiguHaldaja_muudetud_date_format}" field="muudetud" id="s_ee_itcollege_bg_entities_PiiriloiguHaldaja_muudetud" object="${piiriloiguhaldaja}" z="78eNvoIyxTCTudRNZ0Q/UT1d5Xc="/>
-        <field:display date="true" dateTimePattern="${piiriloiguHaldaja_suletud_date_format}" field="suletud" id="s_ee_itcollege_bg_entities_PiiriloiguHaldaja_suletud" object="${piiriloiguhaldaja}" z="hKbtSOPfIkoI8P8YL6lREM7B/tc="/>
     </page:show>
 </div>

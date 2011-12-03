@@ -9,11 +9,5 @@
         <field:display date="true" dateTimePattern="${vaeosa_alates_date_format}" field="alates" id="s_ee_itcollege_bg_entities_Vaeosa_alates" object="${vaeosa}" z="p36J/bw1+MheesTvAia784KDQxI="/>
         <field:display date="true" dateTimePattern="${vaeosa_kuni_date_format}" field="kuni" id="s_ee_itcollege_bg_entities_Vaeosa_kuni" object="${vaeosa}" z="UJgPOoJuI4BHIWgmYOHsAUnzN6w="/>
         <field:display field="asukoht" id="s_ee_itcollege_bg_entities_Vaeosa_asukoht" object="${vaeosa}" z="59h3xWAv+dxP3nh8fq1qZffXdII="/>
-        <field:display field="avaja" id="s_ee_itcollege_bg_entities_Vaeosa_avaja" object="${vaeosa}" z="sliXVvG5/f6bUtnCqcuuT6FELkc="/>
-        <field:display field="muutja" id="s_ee_itcollege_bg_entities_Vaeosa_muutja" object="${vaeosa}" z="OeVXTMadEy05H7jkXz0pGastyik="/>
-        <field:display field="sulgeja" id="s_ee_itcollege_bg_entities_Vaeosa_sulgeja" object="${vaeosa}" z="qNmtYn8xqOVqOamB4Qa28I05vaU="/>
-        <field:display date="true" dateTimePattern="${vaeosa_avatud_date_format}" field="avatud" id="s_ee_itcollege_bg_entities_Vaeosa_avatud" object="${vaeosa}" z="vtI1Pb5kfqwDQYgfLeXWhV5xsUk="/>
-        <field:display date="true" dateTimePattern="${vaeosa_muudetud_date_format}" field="muudetud" id="s_ee_itcollege_bg_entities_Vaeosa_muudetud" object="${vaeosa}" z="5we26K7vZnCgAHFPLjS7ajQbF3Q="/>
-        <field:display date="true" dateTimePattern="${vaeosa_suletud_date_format}" field="suletud" id="s_ee_itcollege_bg_entities_Vaeosa_suletud" object="${vaeosa}" z="o0trdM55VMjfDrTAuNBEzD5pfMA="/>
     </page:show>
 </div>

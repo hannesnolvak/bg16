@@ -88,7 +88,7 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
     
     static class ee.itcollege.bg.web.ApplicationConversionServiceFactoryBean.VaeosaAlluvusConverter implements Converter<VaeosaAlluvus, String> {
         public String convert(VaeosaAlluvus vaeosaAlluvus) {
-            return new StringBuilder().append(vaeosaAlluvus.getKommentaar()).append(" ").append(vaeosaAlluvus.getAlates()).append(" ").append(vaeosaAlluvus.getKuni()).toString();
+            return new StringBuilder().append(vaeosaAlluvus.getAvaja()).append(" ").append(vaeosaAlluvus.getMuutja()).append(" ").append(vaeosaAlluvus.getSulgeja()).append(" ").append(vaeosaAlluvus.getAvatud()).toString();
         }
         
     }

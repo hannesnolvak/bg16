@@ -4,9 +4,9 @@
     <jsp:output omit-xml-declaration="yes"/>
     <page:show id="ps_ee_itcollege_bg_entities_VaeosaAlluvus" object="${vaeosaalluvus}" path="/vaeosaalluvuses" z="T/9TJFzuRa4WPsK2S2qr3ctA+FM=">
         <field:display field="alluv" id="s_ee_itcollege_bg_entities_VaeosaAlluvus_alluv" object="${vaeosaalluvus}" z="eGCl+Sk+hdPvwAw5t6Y2e1EycXI="/>
-        <field:display field="ylem" id="s_ee_itcollege_bg_entities_VaeosaAlluvus_ylem" object="${vaeosaalluvus}" z="ltCDfWq2eaBbt98zKthVUksTsns="/>
         <field:display field="kommentaar" id="s_ee_itcollege_bg_entities_VaeosaAlluvus_kommentaar" object="${vaeosaalluvus}" z="CEmG1MGG9bwuWKS8OfydYIwWh/M="/>
         <field:display date="true" dateTimePattern="${vaeosaAlluvus_alates_date_format}" field="alates" id="s_ee_itcollege_bg_entities_VaeosaAlluvus_alates" object="${vaeosaalluvus}" z="rbzHhwF9RFK93jXDQvbJGBW5scA="/>
         <field:display date="true" dateTimePattern="${vaeosaAlluvus_kuni_date_format}" field="kuni" id="s_ee_itcollege_bg_entities_VaeosaAlluvus_kuni" object="${vaeosaalluvus}" z="WwvI1Mg2yikvItkX9uph9t9vDvo="/>
+        <field:display field="ylem" id="s_ee_itcollege_bg_entities_VaeosaAlluvus_ylem" object="${vaeosaalluvus}" z="ltCDfWq2eaBbt98zKthVUksTsns="/>
     </page:show>
 </div>

@@ -4,13 +4,66 @@
 package ee.itcollege.bg.entities;
 
 import ee.itcollege.bg.entities.Vahtkond;
+import java.lang.Integer;
 import java.lang.Long;
 import java.util.List;
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+import javax.persistence.Version;
+import org.springframework.transaction.annotation.Transactional;
 
 privileged aspect Vahtkond_Roo_Entity {
     
     declare @type: Vahtkond: @Entity;
+    
+    @PersistenceContext
+    transient EntityManager Vahtkond.entityManager;
+    
+    @Version
+    @Column(name = "version")
+    private Integer Vahtkond.version;
+    
+    public Long Vahtkond.getId() {
+        return this.id;
+    }
+    
+    public void Vahtkond.setId(Long id) {
+        this.id = id;
+    }
+    
+    public Integer Vahtkond.getVersion() {
+        return this.version;
+    }
+    
+    public void Vahtkond.setVersion(Integer version) {
+        this.version = version;
+    }
+    
+    @Transactional
+    public void Vahtkond.persist() {
+        if (this.entityManager == null) this.entityManager = entityManager();
+        this.entityManager.persist(this);
+    }
+    
+    @Transactional
+    public void Vahtkond.flush() {
+        if (this.entityManager == null) this.entityManager = entityManager();
+        this.entityManager.flush();
+    }
+    
+    @Transactional
+    public void Vahtkond.clear() {
+        if (this.entityManager == null) this.entityManager = entityManager();
+        this.entityManager.clear();
+    }
+    
+    public static final EntityManager Vahtkond.entityManager() {
+        EntityManager em = new Vahtkond().entityManager;
+        if (em == null) throw new IllegalStateException("Entity manager has not been injected (is the Spring Aspects JAR configured as an AJC/AJDT aspects library?)");
+        return em;
+    }
     
     public static long Vahtkond.countVahtkonds() {
         return entityManager().createQuery("SELECT COUNT(o) FROM Vahtkond o", Long.class).getSingleResult();

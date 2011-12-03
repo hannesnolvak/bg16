@@ -4,7 +4,7 @@
 package ee.itcollege.bg.web;
 
 import ee.itcollege.bg.entities.AdminAlluvus;
-import ee.itcollege.bg.entities.Vaeosa;
+import ee.itcollege.bg.entities.RiigiAdminYksus;
 import java.io.UnsupportedEncodingException;
 import java.lang.Integer;
 import java.lang.Long;
@@ -98,15 +98,12 @@ privileged aspect AdminAlluvusController_Roo_Controller {
         return AdminAlluvus.findAllAdminAlluvuses();
     }
     
-    @ModelAttribute("vaeosas")
-    public Collection<Vaeosa> AdminAlluvusController.populateVaeosas() {
-        return Vaeosa.findAllVaeosas();
+    @ModelAttribute("riigiadminyksuses")
+    public Collection<RiigiAdminYksus> AdminAlluvusController.populateRiigiAdminYksuses() {
+        return RiigiAdminYksus.findAllRiigiAdminYksuses();
     }
     
     void AdminAlluvusController.addDateTimeFormatPatterns(Model uiModel) {
-        uiModel.addAttribute("adminAlluvus_avatud_date_format", "yyyy-MM-dd");
-        uiModel.addAttribute("adminAlluvus_muudetud_date_format", "yyyy-MM-dd");
-        uiModel.addAttribute("adminAlluvus_suletud_date_format", "yyyy-MM-dd");
         uiModel.addAttribute("adminAlluvus_alates_date_format", "yyyy-MM-dd");
         uiModel.addAttribute("adminAlluvus_kuni_date_format", "yyyy-MM-dd");
     }

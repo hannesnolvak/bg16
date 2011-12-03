@@ -9,18 +9,17 @@
   <jsp:directive.attribute name="create" type="java.lang.Boolean" required="false" rtexprvalue="true" description="Include 'create' link into table (default true)" />
   <jsp:directive.attribute name="update" type="java.lang.Boolean" required="false" rtexprvalue="true" description="Include 'update' link into table (default true)" />
   <jsp:directive.attribute name="delete" type="java.lang.Boolean" required="false" rtexprvalue="true" description="Include 'delete' link into table (default true)" />
+  <jsp:directive.attribute name="view" type="java.lang.Boolean" required="false" rtexprvalue="true" description="Include 'view' link into table (default true)" />
   <jsp:directive.attribute name="render" type="java.lang.Boolean" required="false" rtexprvalue="true" description="Indicate if the contents of this tag and all enclosed tags should be rendered (default 'true')" />
   <jsp:directive.attribute name="z" type="java.lang.String" required="false" description="Used for checking if element has been modified (to recalculate simply provide empty string value)" />
+  <jsp:directive.attribute name="columnLabels" type="java.lang.String" required="false" rtexprvalue="true" description="Column labels" />
+  <jsp:directive.attribute name="columnProperties" type="java.lang.String" required="false" rtexprvalue="true" description="Column properties" />
+  <jsp:directive.attribute name="columnTypes" type="java.lang.String" required="false" rtexprvalue="true" description="Column types" />
+  <jsp:directive.attribute name="columnMaxLengths" type="java.lang.String" required="false" rtexprvalue="true" description="Column max len" />
+  <jsp:directive.attribute name="columnDatePatterns" type="java.lang.String" required="false" rtexprvalue="true" description="Column date patterns" />
 
   <c:if test="${empty render or render}">
-
-    <c:set var="columnProperties" scope="request" />
-    <c:set var="columnLabels" scope="request" />
-    <c:set var="columnMaxLengths" scope="request" />
-    <c:set var="columnTypes" scope="request" />
-    <c:set var="columnDatePatterns" scope="request" />
-
-    <jsp:doBody />
+	<jsp:doBody />
 
     <c:if test="${empty typeIdFieldName}">
       <c:set var="typeIdFieldName" value="id" />
@@ -50,7 +49,10 @@
               <spring:eval var="colCounter" expression="colCounter  + 1" />
             </th>
           </c:forTokens>
-          <th></th>
+          <c:if test="${view}">
+	          <th></th>
+	          <spring:eval var="colCounter" expression="colCounter  + 1" />
+          </c:if>
           <c:if test="${update}">
             <th></th>
             <spring:eval var="colCounter" expression="colCounter  + 1" />
@@ -92,14 +94,16 @@
             </td>
           </c:forTokens>
           <c:set var="itemId"><spring:eval expression="item[typeIdFieldName]"/></c:set>
-          <td class="utilbox">
-            <spring:url value="${path}/${itemId}" var="show_form_url" />
-            <spring:url value="/resources/images/show.png" var="show_image_url" />
-            <spring:message arguments="${typeName}" code="entity_show" var="show_label" htmlEscape="false" />
-            <a href="${fn:escapeXml(show_form_url)}" alt="${fn:escapeXml(show_label)}" title="${fn:escapeXml(show_label)}">
-              <img alt="${fn:escapeXml(show_label)}" class="image" src="${fn:escapeXml(show_image_url)}" title="${fn:escapeXml(show_label)}" />
-            </a>
-          </td>
+          <c:if test="${view}">
+	          <td class="utilbox">
+	            <spring:url value="${path}/${itemId}" var="show_form_url" />
+	            <spring:url value="/resources/images/show.png" var="show_image_url" />
+	            <spring:message arguments="${typeName}" code="entity_show" var="show_label" htmlEscape="false" />
+	            <a href="${fn:escapeXml(show_form_url)}" alt="${fn:escapeXml(show_label)}" title="${fn:escapeXml(show_label)}">
+	              <img alt="${fn:escapeXml(show_label)}" class="image" src="${fn:escapeXml(show_image_url)}" title="${fn:escapeXml(show_label)}" />
+	            </a>
+	          </td>
+          </c:if>
           <c:if test="${update}">
             <td class="utilbox">
               <spring:url value="${path}/${itemId}" var="update_form_url">

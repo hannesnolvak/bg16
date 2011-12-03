@@ -8,11 +8,5 @@
         <field:display field="kommentaar" id="s_ee_itcollege_bg_entities_VahtkondPiiriloigul_kommentaar" object="${vahtkondpiiriloigul}" z="+6UNV36+j4V4zJ5u9P7dWFyKBrM="/>
         <field:display date="true" dateTimePattern="${vahtkondPiiriloigul_alates_date_format}" field="alates" id="s_ee_itcollege_bg_entities_VahtkondPiiriloigul_alates" object="${vahtkondpiiriloigul}" z="zODlB0aJAHiU7q1nx7rJ4FE2h0w="/>
         <field:display date="true" dateTimePattern="${vahtkondPiiriloigul_kuni_date_format}" field="kuni" id="s_ee_itcollege_bg_entities_VahtkondPiiriloigul_kuni" object="${vahtkondpiiriloigul}" z="tChaoX/IEyjU1i7QfRqaOZbxyhc="/>
-        <field:display field="avaja" id="s_ee_itcollege_bg_entities_VahtkondPiiriloigul_avaja" object="${vahtkondpiiriloigul}" z="WviGJYL2j7cJvvQl+vWqwd5TVbw="/>
-        <field:display field="muutja" id="s_ee_itcollege_bg_entities_VahtkondPiiriloigul_muutja" object="${vahtkondpiiriloigul}" z="bQRGOn7ErCq4nfyGcZm9exD3hPg="/>
-        <field:display field="sulgeja" id="s_ee_itcollege_bg_entities_VahtkondPiiriloigul_sulgeja" object="${vahtkondpiiriloigul}" z="rWQqCG+5whvGI4anbBF4jPKegVM="/>
-        <field:display date="true" dateTimePattern="${vahtkondPiiriloigul_avatud_date_format}" field="avatud" id="s_ee_itcollege_bg_entities_VahtkondPiiriloigul_avatud" object="${vahtkondpiiriloigul}" z="oMu6hTZ1+AKVtiK+wG7ULfXyYUg="/>
-        <field:display date="true" dateTimePattern="${vahtkondPiiriloigul_muudetud_date_format}" field="muudetud" id="s_ee_itcollege_bg_entities_VahtkondPiiriloigul_muudetud" object="${vahtkondpiiriloigul}" z="27IHIY7qy0ZpCaSgIdslACZ6RFs="/>
-        <field:display date="true" dateTimePattern="${vahtkondPiiriloigul_suletud_date_format}" field="suletud" id="s_ee_itcollege_bg_entities_VahtkondPiiriloigul_suletud" object="${vahtkondpiiriloigul}" z="EmRYkDqWINKbivAJ12AXLkpecq8="/>
     </page:show>
 </div>

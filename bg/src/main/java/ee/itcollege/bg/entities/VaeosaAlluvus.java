@@ -16,7 +16,7 @@ import org.springframework.roo.addon.tostring.RooToString;
 @RooJavaBean
 @RooToString
 @RooEntity
-public class VaeosaAlluvus {
+public class VaeosaAlluvus extends BaseEntity {
 
 	@ManyToOne
 	@JoinColumn(name="alluva_vaeosa_ID")

@@ -10,11 +10,5 @@
         <field:datetime dateTimePattern="${vahtkond_alates_date_format}" field="alates" id="c_ee_itcollege_bg_entities_Vahtkond_alates" required="true" z="D+DSeoSZwadP3TCGlzDvXE7WI70="/>
         <field:datetime dateTimePattern="${vahtkond_kuni_date_format}" field="kuni" id="c_ee_itcollege_bg_entities_Vahtkond_kuni" required="true" z="/2M94JeXdaFZGpGtGkNa50dVxPQ="/>
         <field:select field="vaeosa" id="c_ee_itcollege_bg_entities_Vahtkond_vaeosa" itemValue="id" items="${vaeosas}" path="/vaeosas" required="true" z="rMeSu9RnEJm1QYTnbU2SBbperBU="/>
-        <field:textarea field="avaja" id="c_ee_itcollege_bg_entities_Vahtkond_avaja" z="vD9ZQLhphv6okWZ9emmVaq2G+pk="/>
-        <field:textarea field="muutja" id="c_ee_itcollege_bg_entities_Vahtkond_muutja" z="oFs+d/faqfyXgpveb7JVEbBOl2c="/>
-        <field:textarea field="sulgeja" id="c_ee_itcollege_bg_entities_Vahtkond_sulgeja" z="1Hz3TyzuLZxfDSGAnf9U6wyDahQ="/>
-        <field:datetime dateTimePattern="${vahtkond_avatud_date_format}" field="avatud" id="c_ee_itcollege_bg_entities_Vahtkond_avatud" z="GB6aKQpjQCR6qfVFBvPbBdD0AGE="/>
-        <field:datetime dateTimePattern="${vahtkond_muudetud_date_format}" field="muudetud" id="c_ee_itcollege_bg_entities_Vahtkond_muudetud" z="0QjC1aFlNLCvPkbHZIPwZRB1xoQ="/>
-        <field:datetime dateTimePattern="${vahtkond_suletud_date_format}" field="suletud" id="c_ee_itcollege_bg_entities_Vahtkond_suletud" z="UfkFG7Zfpvl0aouVN3Fa1gNZeTI="/>
     </form:update>
 </div>

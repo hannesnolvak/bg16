@@ -8,11 +8,5 @@
         <field:textarea field="nimetus" id="c_ee_itcollege_bg_entities_RiigiAdminYksus_nimetus" required="true" z="UcldRM4NICXkVyW08KM7D0wOVGI="/>
         <field:datetime dateTimePattern="${riigiAdminYksus_alates_date_format}" field="alates" id="c_ee_itcollege_bg_entities_RiigiAdminYksus_alates" required="true" z="IMpeVCw6ahilfrrQwD7DLS5o2sI="/>
         <field:datetime dateTimePattern="${riigiAdminYksus_kuni_date_format}" field="kuni" id="c_ee_itcollege_bg_entities_RiigiAdminYksus_kuni" required="true" z="iiwmdsAbjyOhN+WJcs+mtuxjdWU="/>
-        <field:textarea field="avaja" id="c_ee_itcollege_bg_entities_RiigiAdminYksus_avaja" z="CDxvuK1MfTPMmf3RyV5Q3vmAtJY="/>
-        <field:textarea field="muutja" id="c_ee_itcollege_bg_entities_RiigiAdminYksus_muutja" z="/1ln060kWeKmHOo3MNrXAljLSP0="/>
-        <field:textarea field="sulgeja" id="c_ee_itcollege_bg_entities_RiigiAdminYksus_sulgeja" z="0w+8aJ+Cj1+QEIH7HAaD9iTpgwc="/>
-        <field:datetime dateTimePattern="${riigiAdminYksus_avatud_date_format}" field="avatud" id="c_ee_itcollege_bg_entities_RiigiAdminYksus_avatud" z="E2YWN9f6+4vcWMD2cIm8owRwVok="/>
-        <field:datetime dateTimePattern="${riigiAdminYksus_muudetud_date_format}" field="muudetud" id="c_ee_itcollege_bg_entities_RiigiAdminYksus_muudetud" z="5iKEW8TgpjsHMhQlU4cYIlaPUFI="/>
-        <field:datetime dateTimePattern="${riigiAdminYksus_suletud_date_format}" field="suletud" id="c_ee_itcollege_bg_entities_RiigiAdminYksus_suletud" z="H+koVrlg7LXAsmThMImG6bUVfDs="/>
     </form:update>
 </div>

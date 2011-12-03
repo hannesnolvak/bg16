@@ -5,15 +5,35 @@ package ee.itcollege.bg.web;
 
 import ee.itcollege.bg.entities.RiigiAdminYksus;
 import java.io.UnsupportedEncodingException;
+import java.lang.Integer;
+import java.lang.Long;
 import java.lang.String;
+import java.util.Collection;
 import javax.servlet.http.HttpServletRequest;
+import javax.validation.Valid;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.util.UriUtils;
 import org.springframework.web.util.WebUtils;
 
 privileged aspect RiigiAdminYksusController_Roo_Controller {
+    
+    @RequestMapping(method = RequestMethod.POST)
+    public String RiigiAdminYksusController.create(@Valid RiigiAdminYksus riigiAdminYksus, BindingResult bindingResult, Model uiModel, HttpServletRequest httpServletRequest) {
+        if (bindingResult.hasErrors()) {
+            uiModel.addAttribute("riigiAdminYksus", riigiAdminYksus);
+            addDateTimeFormatPatterns(uiModel);
+            return "riigiadminyksuses/create";
+        }
+        uiModel.asMap().clear();
+        riigiAdminYksus.persist();
+        return "redirect:/riigiadminyksuses/" + encodeUrlPathSegment(riigiAdminYksus.getId().toString(), httpServletRequest);
+    }
     
     @RequestMapping(params = "form", method = RequestMethod.GET)
     public String RiigiAdminYksusController.createForm(Model uiModel) {
@@ -22,10 +42,62 @@ privileged aspect RiigiAdminYksusController_Roo_Controller {
         return "riigiadminyksuses/create";
     }
     
+    @RequestMapping(value = "/{id}", method = RequestMethod.GET)
+    public String RiigiAdminYksusController.show(@PathVariable("id") Long id, Model uiModel) {
+        addDateTimeFormatPatterns(uiModel);
+        uiModel.addAttribute("riigiadminyksus", RiigiAdminYksus.findRiigiAdminYksus(id));
+        uiModel.addAttribute("itemId", id);
+        return "riigiadminyksuses/show";
+    }
+    
+    @RequestMapping(method = RequestMethod.GET)
+    public String RiigiAdminYksusController.list(@RequestParam(value = "page", required = false) Integer page, @RequestParam(value = "size", required = false) Integer size, Model uiModel) {
+        if (page != null || size != null) {
+            int sizeNo = size == null ? 10 : size.intValue();
+            uiModel.addAttribute("riigiadminyksuses", RiigiAdminYksus.findRiigiAdminYksusEntries(page == null ? 0 : (page.intValue() - 1) * sizeNo, sizeNo));
+            float nrOfPages = (float) RiigiAdminYksus.countRiigiAdminYksuses() / sizeNo;
+            uiModel.addAttribute("maxPages", (int) ((nrOfPages > (int) nrOfPages || nrOfPages == 0.0) ? nrOfPages + 1 : nrOfPages));
+        } else {
+            uiModel.addAttribute("riigiadminyksuses", RiigiAdminYksus.findAllRiigiAdminYksuses());
+        }
+        addDateTimeFormatPatterns(uiModel);
+        return "riigiadminyksuses/list";
+    }
+    
+    @RequestMapping(method = RequestMethod.PUT)
+    public String RiigiAdminYksusController.update(@Valid RiigiAdminYksus riigiAdminYksus, BindingResult bindingResult, Model uiModel, HttpServletRequest httpServletRequest) {
+        if (bindingResult.hasErrors()) {
+            uiModel.addAttribute("riigiAdminYksus", riigiAdminYksus);
+            addDateTimeFormatPatterns(uiModel);
+            return "riigiadminyksuses/update";
+        }
+        uiModel.asMap().clear();
+        riigiAdminYksus.merge();
+        return "redirect:/riigiadminyksuses/" + encodeUrlPathSegment(riigiAdminYksus.getId().toString(), httpServletRequest);
+    }
+    
+    @RequestMapping(value = "/{id}", params = "form", method = RequestMethod.GET)
+    public String RiigiAdminYksusController.updateForm(@PathVariable("id") Long id, Model uiModel) {
+        uiModel.addAttribute("riigiAdminYksus", RiigiAdminYksus.findRiigiAdminYksus(id));
+        addDateTimeFormatPatterns(uiModel);
+        return "riigiadminyksuses/update";
+    }
+    
+    @RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
+    public String RiigiAdminYksusController.delete(@PathVariable("id") Long id, @RequestParam(value = "page", required = false) Integer page, @RequestParam(value = "size", required = false) Integer size, Model uiModel) {
+        RiigiAdminYksus.findRiigiAdminYksus(id).remove();
+        uiModel.asMap().clear();
+        uiModel.addAttribute("page", (page == null) ? "1" : page.toString());
+        uiModel.addAttribute("size", (size == null) ? "10" : size.toString());
+        return "redirect:/riigiadminyksuses";
+    }
+    
+    @ModelAttribute("riigiadminyksuses")
+    public Collection<RiigiAdminYksus> RiigiAdminYksusController.populateRiigiAdminYksuses() {
+        return RiigiAdminYksus.findAllRiigiAdminYksuses();
+    }
+    
     void RiigiAdminYksusController.addDateTimeFormatPatterns(Model uiModel) {
-        uiModel.addAttribute("riigiAdminYksus_avatud_date_format", "yyyy-MM-dd");
-        uiModel.addAttribute("riigiAdminYksus_muudetud_date_format", "yyyy-MM-dd");
-        uiModel.addAttribute("riigiAdminYksus_suletud_date_format", "yyyy-MM-dd");
         uiModel.addAttribute("riigiAdminYksus_alates_date_format", "yyyy-MM-dd");
         uiModel.addAttribute("riigiAdminYksus_kuni_date_format", "yyyy-MM-dd");
     }

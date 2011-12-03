@@ -4,12 +4,11 @@
     <jsp:output omit-xml-declaration="yes"/>
     <page:list id="pl_ee_itcollege_bg_entities_VahtkondPiiriloigul" items="${vahtkondpiiriloiguls}" z="JyCmzCZaZ5E1S2E2FRVf1cHKTFw=">
         <table:table data="${vahtkondpiiriloiguls}" id="l_ee_itcollege_bg_entities_VahtkondPiiriloigul" path="/vahtkondpiiriloiguls" z="dTBNhwPVukBJePufO70/6Q/YEFQ=">
-            <table:column id="c_ee_itcollege_bg_entities_VahtkondPiiriloigul_avaja" property="avaja" z="UCtOQe9qhoHn8shUecyEQWqXrAc="/>
-            <table:column id="c_ee_itcollege_bg_entities_VahtkondPiiriloigul_muutja" property="muutja" z="fxE/1oiKyOC51vjkOvBrVsopC8U="/>
-            <table:column id="c_ee_itcollege_bg_entities_VahtkondPiiriloigul_sulgeja" property="sulgeja" z="ApjC3MlsrfDsrntVn1zHCYRaO64="/>
-            <table:column date="true" dateTimePattern="${vahtkondPiiriloigul_avatud_date_format}" id="c_ee_itcollege_bg_entities_VahtkondPiiriloigul_avatud" property="avatud" z="jjCc1liTXZwGhcCbQXT6XFgzTck="/>
-            <table:column date="true" dateTimePattern="${vahtkondPiiriloigul_muudetud_date_format}" id="c_ee_itcollege_bg_entities_VahtkondPiiriloigul_muudetud" property="muudetud" z="m8MTE+Ob0yUpvKWQB6rQHdy2D2I="/>
-            <table:column date="true" dateTimePattern="${vahtkondPiiriloigul_suletud_date_format}" id="c_ee_itcollege_bg_entities_VahtkondPiiriloigul_suletud" property="suletud" z="8xqk4aHxeCRSfBc4ESnl7kuS8mA="/>
+            <table:column id="c_ee_itcollege_bg_entities_VahtkondPiiriloigul_vahtkond" property="vahtkond" z="Ey8rfLYqOvQtfNDi6V8bTSarZlg="/>
+            <table:column id="c_ee_itcollege_bg_entities_VahtkondPiiriloigul_piiriloik" property="piiriloik" z="j7HAd159hPqP1KIIrE5C9Af6bug="/>
+            <table:column id="c_ee_itcollege_bg_entities_VahtkondPiiriloigul_kommentaar" property="kommentaar" z="vlFDX57E7J2/s2YHbXUsKpv2xYc="/>
+            <table:column date="true" dateTimePattern="${vahtkondPiiriloigul_alates_date_format}" id="c_ee_itcollege_bg_entities_VahtkondPiiriloigul_alates" property="alates" z="PtJOmH8hQMlqOhpTWg8iOqgKX9c="/>
+            <table:column date="true" dateTimePattern="${vahtkondPiiriloigul_kuni_date_format}" id="c_ee_itcollege_bg_entities_VahtkondPiiriloigul_kuni" property="kuni" z="2f902hb9t9RRmmm5hQqzwb5j88s="/>
         </table:table>
     </page:list>
 </div>

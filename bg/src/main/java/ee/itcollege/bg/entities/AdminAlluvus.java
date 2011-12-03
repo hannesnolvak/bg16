@@ -19,11 +19,11 @@ public class AdminAlluvus extends BaseEntity {
 
 	@ManyToOne
 	@JoinColumn(name="alluv_yksus_ID")
-	private Vaeosa alluv;
+	private RiigiAdminYksus alluv;
 
 	@ManyToOne
 	@JoinColumn(name="ylemus_yksus_ID")
-	private Vaeosa ylem;
+	private RiigiAdminYksus ylem;
 	
     @NotNull
     private String kommentaar;

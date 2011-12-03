@@ -8,12 +8,6 @@
         <field:textarea field="nimetus" id="c_ee_itcollege_bg_entities_RiigiAdminYksuseLiik_nimetus" required="true" z="uDfn5qDRIhU/7olliV6H8zG9AHE="/>
         <field:datetime dateTimePattern="${riigiAdminYksuseLiik_alates_date_format}" field="alates" id="c_ee_itcollege_bg_entities_RiigiAdminYksuseLiik_alates" required="true" z="Kw986lRqCUDNiAWN0yRNqzbPu1I="/>
         <field:datetime dateTimePattern="${riigiAdminYksuseLiik_kuni_date_format}" field="kuni" id="c_ee_itcollege_bg_entities_RiigiAdminYksuseLiik_kuni" required="true" z="sg94hdsTgSvuiC4j6snIj4sLUjI="/>
-        <field:textarea field="avaja" id="c_ee_itcollege_bg_entities_RiigiAdminYksuseLiik_avaja" z="8bqoAhF/22BWNWb+Wo2GDc83JwQ="/>
-        <field:textarea field="muutja" id="c_ee_itcollege_bg_entities_RiigiAdminYksuseLiik_muutja" z="nEBDI0xU5Ses4hgUxDNg74Bv708="/>
-        <field:textarea field="sulgeja" id="c_ee_itcollege_bg_entities_RiigiAdminYksuseLiik_sulgeja" z="ZV3uGrORWw6dZ5ugiwiymnCFNJY="/>
-        <field:datetime dateTimePattern="${riigiAdminYksuseLiik_avatud_date_format}" field="avatud" id="c_ee_itcollege_bg_entities_RiigiAdminYksuseLiik_avatud" z="v1nWkjHIVlYPjAbZ7BFkokGCGfk="/>
-        <field:datetime dateTimePattern="${riigiAdminYksuseLiik_muudetud_date_format}" field="muudetud" id="c_ee_itcollege_bg_entities_RiigiAdminYksuseLiik_muudetud" z="fQZXmlIhRIax2gpGTq6Mdl8sn2Q="/>
-        <field:datetime dateTimePattern="${riigiAdminYksuseLiik_suletud_date_format}" field="suletud" id="c_ee_itcollege_bg_entities_RiigiAdminYksuseLiik_suletud" z="xAfB8Uugtmwq22G17TbXNF9wiO0="/>
     </form:create>
     <form:dependency dependencies="${dependencies}" id="d_ee_itcollege_bg_entities_RiigiAdminYksuseLiik" render="${not empty dependencies}" z="phye9IZndMCdpnxfCWfGTyWr1nM="/>
 </div>

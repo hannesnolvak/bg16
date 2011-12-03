@@ -9,6 +9,9 @@ import java.lang.Long;
 import java.util.List;
 import javax.persistence.Column;
 import javax.persistence.EntityManager;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Version;
 import org.springframework.transaction.annotation.Transactional;
@@ -17,6 +20,11 @@ privileged aspect BaseEntity_Roo_Entity {
     
     @PersistenceContext
     transient EntityManager BaseEntity.entityManager;
+    
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "id")
+    private Long BaseEntity.id;
     
     @Version
     @Column(name = "version")

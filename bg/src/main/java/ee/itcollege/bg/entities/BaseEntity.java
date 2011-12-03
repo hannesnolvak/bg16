@@ -3,6 +3,8 @@ package ee.itcollege.bg.entities;
 import java.util.Calendar;
 import java.util.Date;
 
+import javax.persistence.Access;
+import javax.persistence.AccessType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -24,6 +26,7 @@ import org.springframework.transaction.annotation.Transactional;
 @MappedSuperclass
 @RooToString
 @RooEntity(mappedSuperclass = true)
+@Access(AccessType.FIELD)
 public abstract class BaseEntity {
 
 	@Id
@@ -127,12 +130,12 @@ public abstract class BaseEntity {
 			oldEntity.close();
 
 			if (getAvatud() == null) {
-				setAvatud(oldEntity.getAvatud());
-				setAvaja(oldEntity.getAvaja());
+				avatud = oldEntity.getAvatud();
+				avaja  = oldEntity.getAvaja();
 			}
 			
-			setSuletud(null);
-			setSulgeja(null);
+			suletud = null;
+			sulgeja = null;
 
 			clearId();
 			persist();
@@ -148,30 +151,6 @@ public abstract class BaseEntity {
 	public void clearId()
 	{
 		this.id = null;
-	}
-
-	protected void setAvaja(String avaja) {
-		this.avaja = avaja;
-	}
-
-	protected void setMuutja(String muutja) {
-		this.muutja = muutja;
-	}
-
-	protected void setSulgeja(String sulgeja) {
-		this.sulgeja = sulgeja;
-	}
-
-	protected void setAvatud(Date avatud) {
-		this.avatud = avatud;
-	}
-
-	protected void setMuudetud(Date muudetud) {
-		this.muudetud = muudetud;
-	}
-
-	protected void setSuletud(Date suletud) {
-		this.suletud = suletud;
 	}
 
 	public String getAvaja() {

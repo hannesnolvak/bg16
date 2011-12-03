@@ -126,9 +126,6 @@ privileged aspect PiiriloiguHaldajaController_Roo_Controller {
     }
     
     void PiiriloiguHaldajaController.addDateTimeFormatPatterns(Model uiModel) {
-        uiModel.addAttribute("piiriloiguHaldaja_avatud_date_format", "yyyy-MM-dd");
-        uiModel.addAttribute("piiriloiguHaldaja_muudetud_date_format", "yyyy-MM-dd");
-        uiModel.addAttribute("piiriloiguHaldaja_suletud_date_format", "yyyy-MM-dd");
         uiModel.addAttribute("piiriloiguHaldaja_alates_date_format", "yyyy-MM-dd");
         uiModel.addAttribute("piiriloiguHaldaja_kuni_date_format", "yyyy-MM-dd");
     }

@@ -8,11 +8,5 @@
         <field:display field="nimetus" id="s_ee_itcollege_bg_entities_RiigiAdminYksus_nimetus" object="${riigiadminyksus}" z="J3uRXJfmwiwp3jxfqwHmOqKgwgo="/>
         <field:display date="true" dateTimePattern="${riigiAdminYksus_alates_date_format}" field="alates" id="s_ee_itcollege_bg_entities_RiigiAdminYksus_alates" object="${riigiadminyksus}" z="lBduetxH2Z02AerypHv3vviIV+8="/>
         <field:display date="true" dateTimePattern="${riigiAdminYksus_kuni_date_format}" field="kuni" id="s_ee_itcollege_bg_entities_RiigiAdminYksus_kuni" object="${riigiadminyksus}" z="6Xq9IMhY29Jv/wANA6No45BMgbQ="/>
-        <field:display field="avaja" id="s_ee_itcollege_bg_entities_RiigiAdminYksus_avaja" object="${riigiadminyksus}" z="SkfePV9IRTM96vL4UzJNLnYyQVg="/>
-        <field:display field="muutja" id="s_ee_itcollege_bg_entities_RiigiAdminYksus_muutja" object="${riigiadminyksus}" z="0PllSgKO6h8vN1sPweK7ADBMLXw="/>
-        <field:display field="sulgeja" id="s_ee_itcollege_bg_entities_RiigiAdminYksus_sulgeja" object="${riigiadminyksus}" z="hsauaJ635rWM11xs1Uu6J8W9crg="/>
-        <field:display date="true" dateTimePattern="${riigiAdminYksus_avatud_date_format}" field="avatud" id="s_ee_itcollege_bg_entities_RiigiAdminYksus_avatud" object="${riigiadminyksus}" z="BIGn4Stu37PmrorPAD03cbdu8MI="/>
-        <field:display date="true" dateTimePattern="${riigiAdminYksus_muudetud_date_format}" field="muudetud" id="s_ee_itcollege_bg_entities_RiigiAdminYksus_muudetud" object="${riigiadminyksus}" z="1QrZyfe0O6vljPa1m4xYZfApaTs="/>
-        <field:display date="true" dateTimePattern="${riigiAdminYksus_suletud_date_format}" field="suletud" id="s_ee_itcollege_bg_entities_RiigiAdminYksus_suletud" object="${riigiadminyksus}" z="OVTAGSHBfntHnMAzS8lku3kyYqs="/>
     </page:show>
 </div>

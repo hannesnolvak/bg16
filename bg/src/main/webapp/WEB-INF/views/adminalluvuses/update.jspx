@@ -3,16 +3,10 @@
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
     <form:update id="fu_ee_itcollege_bg_entities_AdminAlluvus" modelAttribute="adminAlluvus" path="/adminalluvuses" versionField="Version" z="+sepmkS2+3DnsPcq6yZeN8G+RfU=">
-        <field:select field="alluv" id="c_ee_itcollege_bg_entities_AdminAlluvus_alluv" itemValue="id" items="${vaeosas}" path="/vaeosas" z="ILvIlxuQ6lNtQSQmjcYdoAxYIL4="/>
-        <field:select field="ylem" id="c_ee_itcollege_bg_entities_AdminAlluvus_ylem" itemValue="id" items="${vaeosas}" path="/vaeosas" z="REOKKfD0xrOdEDmDhLXAFArgmQo="/>
+        <field:select field="alluv" id="c_ee_itcollege_bg_entities_AdminAlluvus_alluv" itemValue="id" items="${riigiadminyksuses}" path="/riigiadminyksuses" z="fjkIZpq2hwXGzEcYiRKzflYOLUg="/>
         <field:input field="kommentaar" id="c_ee_itcollege_bg_entities_AdminAlluvus_kommentaar" required="true" z="OXUwl2Ru4N6/q8vdvEkzwh3ak7s="/>
         <field:datetime dateTimePattern="${adminAlluvus_alates_date_format}" field="alates" id="c_ee_itcollege_bg_entities_AdminAlluvus_alates" required="true" z="kmNDEkBzAQcfl9Mj+rSipVhy3Sg="/>
         <field:datetime dateTimePattern="${adminAlluvus_kuni_date_format}" field="kuni" id="c_ee_itcollege_bg_entities_AdminAlluvus_kuni" required="true" z="ECH+yr7oh68ZGLOLRlNTsQwV8/c="/>
-        <field:textarea field="avaja" id="c_ee_itcollege_bg_entities_AdminAlluvus_avaja" z="bneBE5nGLHT5NV1wtFW/ieNGSo4="/>
-        <field:textarea field="muutja" id="c_ee_itcollege_bg_entities_AdminAlluvus_muutja" z="5wKJMT5RcVqs2V7Xai2nnybA78o="/>
-        <field:textarea field="sulgeja" id="c_ee_itcollege_bg_entities_AdminAlluvus_sulgeja" z="lZLT7xydsQPYfXJlL7BlZYDP88k="/>
-        <field:datetime dateTimePattern="${adminAlluvus_avatud_date_format}" field="avatud" id="c_ee_itcollege_bg_entities_AdminAlluvus_avatud" z="EGXJd043sXgzMebBDNAKykdCt+s="/>
-        <field:datetime dateTimePattern="${adminAlluvus_muudetud_date_format}" field="muudetud" id="c_ee_itcollege_bg_entities_AdminAlluvus_muudetud" z="iJJNy+rCzHtK7mrTi6YyP42iHEw="/>
-        <field:datetime dateTimePattern="${adminAlluvus_suletud_date_format}" field="suletud" id="c_ee_itcollege_bg_entities_AdminAlluvus_suletud" z="bgjymQVGEqw91xw1uUG4Vyew04M="/>
+        <field:select field="ylem" id="c_ee_itcollege_bg_entities_AdminAlluvus_ylem" itemValue="id" items="${riigiadminyksuses}" path="/riigiadminyksuses" z="8m+ntal6fBY9P9tS4eNBdIkhuXc="/>
     </form:update>
 </div>

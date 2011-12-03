@@ -4,12 +4,11 @@
     <jsp:output omit-xml-declaration="yes"/>
     <page:list id="pl_ee_itcollege_bg_entities_AdminAlluvus" items="${adminalluvuses}" z="H1NRwHuuFTbnWakUQ2w5OLmtJMw=">
         <table:table data="${adminalluvuses}" id="l_ee_itcollege_bg_entities_AdminAlluvus" path="/adminalluvuses" z="oSaTi1nK4dDUHU3RpC+cXtsVEb4=">
-            <table:column id="c_ee_itcollege_bg_entities_AdminAlluvus_avaja" property="avaja" z="IPoLdvMhLoFVkwoACGb4R7z2ldU="/>
-            <table:column id="c_ee_itcollege_bg_entities_AdminAlluvus_muutja" property="muutja" z="OVGSdx89sWV6T98B6ermg63xt1s="/>
-            <table:column id="c_ee_itcollege_bg_entities_AdminAlluvus_sulgeja" property="sulgeja" z="6QIETr1bYwCR47q3WixzYomeQ/s="/>
-            <table:column date="true" dateTimePattern="${adminAlluvus_avatud_date_format}" id="c_ee_itcollege_bg_entities_AdminAlluvus_avatud" property="avatud" z="b4PCJVaLvQLOSkFvp1qmsAtAIB8="/>
-            <table:column date="true" dateTimePattern="${adminAlluvus_muudetud_date_format}" id="c_ee_itcollege_bg_entities_AdminAlluvus_muudetud" property="muudetud" z="EZqsM994A2vBKlg9la16EjiKLx8="/>
-            <table:column date="true" dateTimePattern="${adminAlluvus_suletud_date_format}" id="c_ee_itcollege_bg_entities_AdminAlluvus_suletud" property="suletud" z="GONrdLskwab30vjoo8VH/0yRLlI="/>
+            <table:column id="c_ee_itcollege_bg_entities_AdminAlluvus_alluv" property="alluv" z="d/esdimTjaID7jBck3iOdJtLejs="/>
+            <table:column id="c_ee_itcollege_bg_entities_AdminAlluvus_ylem" property="ylem" z="kNHBOxRB12hp/nIFsrbb0dpCNUc="/>
+            <table:column id="c_ee_itcollege_bg_entities_AdminAlluvus_kommentaar" property="kommentaar" z="AZWv6hYNMWVcFEe7eYUKBzrf2h8="/>
+            <table:column date="true" dateTimePattern="${adminAlluvus_alates_date_format}" id="c_ee_itcollege_bg_entities_AdminAlluvus_alates" property="alates" z="3e/OojiU5lkKRRdXVB6TS2m4lU0="/>
+            <table:column date="true" dateTimePattern="${adminAlluvus_kuni_date_format}" id="c_ee_itcollege_bg_entities_AdminAlluvus_kuni" property="kuni" z="+o5jolDX2Fw2evgl+GcVaxDuakQ="/>
         </table:table>
     </page:list>
 </div>

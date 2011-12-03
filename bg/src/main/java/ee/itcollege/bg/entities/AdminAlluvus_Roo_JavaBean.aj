@@ -3,25 +3,25 @@
 
 package ee.itcollege.bg.entities;
 
-import ee.itcollege.bg.entities.Vaeosa;
+import ee.itcollege.bg.entities.RiigiAdminYksus;
 import java.lang.String;
 import java.util.Date;
 
 privileged aspect AdminAlluvus_Roo_JavaBean {
     
-    public Vaeosa AdminAlluvus.getAlluv() {
+    public RiigiAdminYksus AdminAlluvus.getAlluv() {
         return this.alluv;
     }
     
-    public void AdminAlluvus.setAlluv(Vaeosa alluv) {
+    public void AdminAlluvus.setAlluv(RiigiAdminYksus alluv) {
         this.alluv = alluv;
     }
     
-    public Vaeosa AdminAlluvus.getYlem() {
+    public RiigiAdminYksus AdminAlluvus.getYlem() {
         return this.ylem;
     }
     
-    public void AdminAlluvus.setYlem(Vaeosa ylem) {
+    public void AdminAlluvus.setYlem(RiigiAdminYksus ylem) {
         this.ylem = ylem;
     }
     

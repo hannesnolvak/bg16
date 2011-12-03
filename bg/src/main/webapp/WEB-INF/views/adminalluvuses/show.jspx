@@ -4,15 +4,9 @@
     <jsp:output omit-xml-declaration="yes"/>
     <page:show id="ps_ee_itcollege_bg_entities_AdminAlluvus" object="${adminalluvus}" path="/adminalluvuses" z="mOuCpFetr05r6iBUe0pGz8AuRFI=">
         <field:display field="alluv" id="s_ee_itcollege_bg_entities_AdminAlluvus_alluv" object="${adminalluvus}" z="vYVmxmex5+3H1ftcct7uOUoolB8="/>
-        <field:display field="ylem" id="s_ee_itcollege_bg_entities_AdminAlluvus_ylem" object="${adminalluvus}" z="0gwvD9FGB579VwbZeY4abwUehLg="/>
         <field:display field="kommentaar" id="s_ee_itcollege_bg_entities_AdminAlluvus_kommentaar" object="${adminalluvus}" z="Wakd6Om2A7v8KC2Jp1TW36Qe9CE="/>
         <field:display date="true" dateTimePattern="${adminAlluvus_alates_date_format}" field="alates" id="s_ee_itcollege_bg_entities_AdminAlluvus_alates" object="${adminalluvus}" z="SKahhxTV01QHV6cB+a0xmxrxTJE="/>
         <field:display date="true" dateTimePattern="${adminAlluvus_kuni_date_format}" field="kuni" id="s_ee_itcollege_bg_entities_AdminAlluvus_kuni" object="${adminalluvus}" z="Q66478bVykoUhDkIp8qq3G6IDUI="/>
-        <field:display field="avaja" id="s_ee_itcollege_bg_entities_AdminAlluvus_avaja" object="${adminalluvus}" z="p61f4MvCgSBcHTYDzQTFfa1RxDk="/>
-        <field:display field="muutja" id="s_ee_itcollege_bg_entities_AdminAlluvus_muutja" object="${adminalluvus}" z="EONjkaIvdxnnpU3wsOegjlsW0Wo="/>
-        <field:display field="sulgeja" id="s_ee_itcollege_bg_entities_AdminAlluvus_sulgeja" object="${adminalluvus}" z="D7pNJ1SEdnkZBlqTbM441DRi61g="/>
-        <field:display date="true" dateTimePattern="${adminAlluvus_avatud_date_format}" field="avatud" id="s_ee_itcollege_bg_entities_AdminAlluvus_avatud" object="${adminalluvus}" z="whHX4aTo+bdXIoPPbA6Biss3z0k="/>
-        <field:display date="true" dateTimePattern="${adminAlluvus_muudetud_date_format}" field="muudetud" id="s_ee_itcollege_bg_entities_AdminAlluvus_muudetud" object="${adminalluvus}" z="BLV3RFYruGQLXNm/VNn3dagByzc="/>
-        <field:display date="true" dateTimePattern="${adminAlluvus_suletud_date_format}" field="suletud" id="s_ee_itcollege_bg_entities_AdminAlluvus_suletud" object="${adminalluvus}" z="UTvvQJx+m2m0Q8hkPDjLbMOV/Ks="/>
+        <field:display field="ylem" id="s_ee_itcollege_bg_entities_AdminAlluvus_ylem" object="${adminalluvus}" z="0gwvD9FGB579VwbZeY4abwUehLg="/>
     </page:show>
 </div>

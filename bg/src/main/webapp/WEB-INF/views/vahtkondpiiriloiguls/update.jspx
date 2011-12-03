@@ -8,11 +8,5 @@
         <field:input field="kommentaar" id="c_ee_itcollege_bg_entities_VahtkondPiiriloigul_kommentaar" required="true" z="fPUNPBHQubygpuCyUCa2k8QbU6Q="/>
         <field:datetime dateTimePattern="${vahtkondPiiriloigul_alates_date_format}" field="alates" id="c_ee_itcollege_bg_entities_VahtkondPiiriloigul_alates" required="true" z="9WtgUrUS/eRCI+3QXZCZi9YWvAw="/>
         <field:datetime dateTimePattern="${vahtkondPiiriloigul_kuni_date_format}" field="kuni" id="c_ee_itcollege_bg_entities_VahtkondPiiriloigul_kuni" required="true" z="MMBxbp+DK4TtY/0CRUUjd4gLxPQ="/>
-        <field:textarea field="avaja" id="c_ee_itcollege_bg_entities_VahtkondPiiriloigul_avaja" z="zO1Fc6uEz7JTjOX9XjtuoW/vJYM="/>
-        <field:textarea field="muutja" id="c_ee_itcollege_bg_entities_VahtkondPiiriloigul_muutja" z="wKmJyFti+UwIyO9hi217KAvVpj4="/>
-        <field:textarea field="sulgeja" id="c_ee_itcollege_bg_entities_VahtkondPiiriloigul_sulgeja" z="N/8ls3I2O2QwgYgGUSjxYwpnd0A="/>
-        <field:datetime dateTimePattern="${vahtkondPiiriloigul_avatud_date_format}" field="avatud" id="c_ee_itcollege_bg_entities_VahtkondPiiriloigul_avatud" z="UzVFMDu3KcocOnrEklQKCORM8ag="/>
-        <field:datetime dateTimePattern="${vahtkondPiiriloigul_muudetud_date_format}" field="muudetud" id="c_ee_itcollege_bg_entities_VahtkondPiiriloigul_muudetud" z="/mibmhkgdYnzUS6Z3z3x7YbApjQ="/>
-        <field:datetime dateTimePattern="${vahtkondPiiriloigul_suletud_date_format}" field="suletud" id="c_ee_itcollege_bg_entities_VahtkondPiiriloigul_suletud" z="bIXGkxSc/gWxRR69qYN8+ecFSkA="/>
     </form:update>
 </div>

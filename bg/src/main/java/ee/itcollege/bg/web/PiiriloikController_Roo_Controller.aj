@@ -31,7 +31,6 @@ privileged aspect PiiriloikController_Roo_Controller {
     public String PiiriloikController.create(@Valid Piiriloik piiriloik, BindingResult bindingResult, Model uiModel, HttpServletRequest httpServletRequest) {
         if (bindingResult.hasErrors()) {
             uiModel.addAttribute("piiriloik", piiriloik);
-            addDateTimeFormatPatterns(uiModel);
             return "piiriloiks/create";
         }
         uiModel.asMap().clear();
@@ -42,7 +41,6 @@ privileged aspect PiiriloikController_Roo_Controller {
     @RequestMapping(params = "form", method = RequestMethod.GET)
     public String PiiriloikController.createForm(Model uiModel) {
         uiModel.addAttribute("piiriloik", new Piiriloik());
-        addDateTimeFormatPatterns(uiModel);
         List dependencies = new ArrayList();
         if (PiiriloiguHaldaja.countPiiriloiguHaldajas() == 0) {
             dependencies.add(new String[]{"piiriloiguhaldaja", "piiriloiguhaldajas"});
@@ -53,7 +51,6 @@ privileged aspect PiiriloikController_Roo_Controller {
     
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)
     public String PiiriloikController.show(@PathVariable("id") Long id, Model uiModel) {
-        addDateTimeFormatPatterns(uiModel);
         uiModel.addAttribute("piiriloik", Piiriloik.findPiiriloik(id));
         uiModel.addAttribute("itemId", id);
         return "piiriloiks/show";
@@ -69,27 +66,7 @@ privileged aspect PiiriloikController_Roo_Controller {
         } else {
             uiModel.addAttribute("piiriloiks", Piiriloik.findAllPiiriloiks());
         }
-        addDateTimeFormatPatterns(uiModel);
         return "piiriloiks/list";
-    }
-    
-    @RequestMapping(method = RequestMethod.PUT)
-    public String PiiriloikController.update(@Valid Piiriloik piiriloik, BindingResult bindingResult, Model uiModel, HttpServletRequest httpServletRequest) {
-        if (bindingResult.hasErrors()) {
-            uiModel.addAttribute("piiriloik", piiriloik);
-            addDateTimeFormatPatterns(uiModel);
-            return "piiriloiks/update";
-        }
-        uiModel.asMap().clear();
-        piiriloik.merge();
-        return "redirect:/piiriloiks/" + encodeUrlPathSegment(piiriloik.getId().toString(), httpServletRequest);
-    }
-    
-    @RequestMapping(value = "/{id}", params = "form", method = RequestMethod.GET)
-    public String PiiriloikController.updateForm(@PathVariable("id") Long id, Model uiModel) {
-        uiModel.addAttribute("piiriloik", Piiriloik.findPiiriloik(id));
-        addDateTimeFormatPatterns(uiModel);
-        return "piiriloiks/update";
     }
     
     @RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
@@ -114,12 +91,6 @@ privileged aspect PiiriloikController_Roo_Controller {
     @ModelAttribute("vahtkondpiiriloiguls")
     public Collection<VahtkondPiiriloigul> PiiriloikController.populateVahtkondPiiriloiguls() {
         return VahtkondPiiriloigul.findAllVahtkondPiiriloiguls();
-    }
-    
-    void PiiriloikController.addDateTimeFormatPatterns(Model uiModel) {
-        uiModel.addAttribute("piiriloik_avatud_date_format", "yyyy-MM-dd");
-        uiModel.addAttribute("piiriloik_muudetud_date_format", "yyyy-MM-dd");
-        uiModel.addAttribute("piiriloik_suletud_date_format", "yyyy-MM-dd");
     }
     
     String PiiriloikController.encodeUrlPathSegment(String pathSegment, HttpServletRequest httpServletRequest) {

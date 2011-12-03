@@ -10,11 +10,5 @@
         <field:display date="true" dateTimePattern="${vahtkond_alates_date_format}" field="alates" id="s_ee_itcollege_bg_entities_Vahtkond_alates" object="${vahtkond}" z="HOXoB8J40mRiUkPF4/6ddbG4FBs="/>
         <field:display date="true" dateTimePattern="${vahtkond_kuni_date_format}" field="kuni" id="s_ee_itcollege_bg_entities_Vahtkond_kuni" object="${vahtkond}" z="xFgkVWC/uIdjUArw1ruUFjsBrKc="/>
         <field:display field="vaeosa" id="s_ee_itcollege_bg_entities_Vahtkond_vaeosa" object="${vahtkond}" z="+ZlfilNOInqLZnb2FncDb/XzPV0="/>
-        <field:display field="avaja" id="s_ee_itcollege_bg_entities_Vahtkond_avaja" object="${vahtkond}" z="r9IhwLpiVXtS2jq7XBbJaMW51XQ="/>
-        <field:display field="muutja" id="s_ee_itcollege_bg_entities_Vahtkond_muutja" object="${vahtkond}" z="2g8xdLXG85vOrMXI6idvbqC76c4="/>
-        <field:display field="sulgeja" id="s_ee_itcollege_bg_entities_Vahtkond_sulgeja" object="${vahtkond}" z="8+oBjbNj7oct3gYlMzuv03Pgm2c="/>
-        <field:display date="true" dateTimePattern="${vahtkond_avatud_date_format}" field="avatud" id="s_ee_itcollege_bg_entities_Vahtkond_avatud" object="${vahtkond}" z="BPOPb74UGJHc8uFCO3O3C/xDMzs="/>
-        <field:display date="true" dateTimePattern="${vahtkond_muudetud_date_format}" field="muudetud" id="s_ee_itcollege_bg_entities_Vahtkond_muudetud" object="${vahtkond}" z="fFsxYRg30/cvFLT/Nk9TkyO1kSw="/>
-        <field:display date="true" dateTimePattern="${vahtkond_suletud_date_format}" field="suletud" id="s_ee_itcollege_bg_entities_Vahtkond_suletud" object="${vahtkond}" z="XMkhY1tlUJIus4TotfpLBHPXIHw="/>
     </page:show>
 </div>

@@ -120,9 +120,6 @@ privileged aspect VahtkondController_Roo_Controller {
     }
     
     void VahtkondController.addDateTimeFormatPatterns(Model uiModel) {
-        uiModel.addAttribute("vahtkond_avatud_date_format", "yyyy-MM-dd");
-        uiModel.addAttribute("vahtkond_muudetud_date_format", "yyyy-MM-dd");
-        uiModel.addAttribute("vahtkond_suletud_date_format", "yyyy-MM-dd");
         uiModel.addAttribute("vahtkond_alates_date_format", "yyyy-MM-dd");
         uiModel.addAttribute("vahtkond_kuni_date_format", "yyyy-MM-dd");
     }

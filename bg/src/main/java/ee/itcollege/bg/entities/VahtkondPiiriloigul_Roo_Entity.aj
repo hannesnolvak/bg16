@@ -4,13 +4,66 @@
 package ee.itcollege.bg.entities;
 
 import ee.itcollege.bg.entities.VahtkondPiiriloigul;
+import java.lang.Integer;
 import java.lang.Long;
 import java.util.List;
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+import javax.persistence.Version;
+import org.springframework.transaction.annotation.Transactional;
 
 privileged aspect VahtkondPiiriloigul_Roo_Entity {
     
     declare @type: VahtkondPiiriloigul: @Entity;
+    
+    @PersistenceContext
+    transient EntityManager VahtkondPiiriloigul.entityManager;
+    
+    @Version
+    @Column(name = "version")
+    private Integer VahtkondPiiriloigul.version;
+    
+    public Long VahtkondPiiriloigul.getId() {
+        return this.id;
+    }
+    
+    public void VahtkondPiiriloigul.setId(Long id) {
+        this.id = id;
+    }
+    
+    public Integer VahtkondPiiriloigul.getVersion() {
+        return this.version;
+    }
+    
+    public void VahtkondPiiriloigul.setVersion(Integer version) {
+        this.version = version;
+    }
+    
+    @Transactional
+    public void VahtkondPiiriloigul.persist() {
+        if (this.entityManager == null) this.entityManager = entityManager();
+        this.entityManager.persist(this);
+    }
+    
+    @Transactional
+    public void VahtkondPiiriloigul.flush() {
+        if (this.entityManager == null) this.entityManager = entityManager();
+        this.entityManager.flush();
+    }
+    
+    @Transactional
+    public void VahtkondPiiriloigul.clear() {
+        if (this.entityManager == null) this.entityManager = entityManager();
+        this.entityManager.clear();
+    }
+    
+    public static final EntityManager VahtkondPiiriloigul.entityManager() {
+        EntityManager em = new VahtkondPiiriloigul().entityManager;
+        if (em == null) throw new IllegalStateException("Entity manager has not been injected (is the Spring Aspects JAR configured as an AJC/AJDT aspects library?)");
+        return em;
+    }
     
     public static long VahtkondPiiriloigul.countVahtkondPiiriloiguls() {
         return entityManager().createQuery("SELECT COUNT(o) FROM VahtkondPiiriloigul o", Long.class).getSingleResult();

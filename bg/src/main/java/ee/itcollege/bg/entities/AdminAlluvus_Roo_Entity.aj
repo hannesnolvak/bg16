@@ -4,13 +4,66 @@
 package ee.itcollege.bg.entities;
 
 import ee.itcollege.bg.entities.AdminAlluvus;
+import java.lang.Integer;
 import java.lang.Long;
 import java.util.List;
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+import javax.persistence.Version;
+import org.springframework.transaction.annotation.Transactional;
 
 privileged aspect AdminAlluvus_Roo_Entity {
     
     declare @type: AdminAlluvus: @Entity;
+    
+    @PersistenceContext
+    transient EntityManager AdminAlluvus.entityManager;
+    
+    @Version
+    @Column(name = "version")
+    private Integer AdminAlluvus.version;
+    
+    public Long AdminAlluvus.getId() {
+        return this.id;
+    }
+    
+    public void AdminAlluvus.setId(Long id) {
+        this.id = id;
+    }
+    
+    public Integer AdminAlluvus.getVersion() {
+        return this.version;
+    }
+    
+    public void AdminAlluvus.setVersion(Integer version) {
+        this.version = version;
+    }
+    
+    @Transactional
+    public void AdminAlluvus.persist() {
+        if (this.entityManager == null) this.entityManager = entityManager();
+        this.entityManager.persist(this);
+    }
+    
+    @Transactional
+    public void AdminAlluvus.flush() {
+        if (this.entityManager == null) this.entityManager = entityManager();
+        this.entityManager.flush();
+    }
+    
+    @Transactional
+    public void AdminAlluvus.clear() {
+        if (this.entityManager == null) this.entityManager = entityManager();
+        this.entityManager.clear();
+    }
+    
+    public static final EntityManager AdminAlluvus.entityManager() {
+        EntityManager em = new AdminAlluvus().entityManager;
+        if (em == null) throw new IllegalStateException("Entity manager has not been injected (is the Spring Aspects JAR configured as an AJC/AJDT aspects library?)");
+        return em;
+    }
     
     public static long AdminAlluvus.countAdminAlluvuses() {
         return entityManager().createQuery("SELECT COUNT(o) FROM AdminAlluvus o", Long.class).getSingleResult();

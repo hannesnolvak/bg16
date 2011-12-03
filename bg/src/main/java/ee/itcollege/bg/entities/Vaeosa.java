@@ -26,8 +26,8 @@ public class Vaeosa extends BaseEntity {
 
 	@OneToMany(mappedBy="alluv")
 	private Collection<VaeosaAlluvus> alluvad;
-	
-    @ManyToOne
+
+	@ManyToOne
     @JoinColumn(name="riigi_admin_yksus_ID")
     private RiigiAdminYksus asukoht;
 	

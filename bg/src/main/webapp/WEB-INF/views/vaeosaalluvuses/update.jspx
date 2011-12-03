@@ -4,9 +4,9 @@
     <jsp:output omit-xml-declaration="yes"/>
     <form:update id="fu_ee_itcollege_bg_entities_VaeosaAlluvus" modelAttribute="vaeosaAlluvus" path="/vaeosaalluvuses" versionField="Version" z="JLvcsMtsj6m2PjQkTUknQg+93X8=">
         <field:select field="alluv" id="c_ee_itcollege_bg_entities_VaeosaAlluvus_alluv" itemValue="id" items="${vaeosas}" path="/vaeosas" z="AsSRuejJeizU2Awf86L3kvjG6lw="/>
-        <field:select field="ylem" id="c_ee_itcollege_bg_entities_VaeosaAlluvus_ylem" itemValue="id" items="${vaeosas}" path="/vaeosas" z="APtEcYXyxC08JXDWng0+f6UHM7E="/>
         <field:input field="kommentaar" id="c_ee_itcollege_bg_entities_VaeosaAlluvus_kommentaar" required="true" z="y1oyCt3v/Y0PjL3cQlu8exlH1Sg="/>
         <field:datetime dateTimePattern="${vaeosaAlluvus_alates_date_format}" field="alates" id="c_ee_itcollege_bg_entities_VaeosaAlluvus_alates" required="true" z="tZ3X8o3okRY2pIv/bpej7PqXNWE="/>
         <field:datetime dateTimePattern="${vaeosaAlluvus_kuni_date_format}" field="kuni" id="c_ee_itcollege_bg_entities_VaeosaAlluvus_kuni" required="true" z="TNsvPfN7nDIzdq9mvyNSPShS0pA="/>
+        <field:select field="ylem" id="c_ee_itcollege_bg_entities_VaeosaAlluvus_ylem" itemValue="id" items="${vaeosas}" path="/vaeosas" z="APtEcYXyxC08JXDWng0+f6UHM7E="/>
     </form:update>
 </div>

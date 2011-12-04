@@ -12,7 +12,7 @@
             <field:textarea field="kommentaar" id="c_ee_itcollege_bg_entities_Vaeosa_kommentaar" required="true" z="user-managed"/>
             <field:datetime dateTimePattern="${vaeosa_alates_date_format}" field="alates" id="c_ee_itcollege_bg_entities_Vaeosa_alates" required="true" z="bbbXb8J1dyNwqoLQYdJjW/4TVh4="/>
             <field:datetime dateTimePattern="${vaeosa_kuni_date_format}" field="kuni" id="c_ee_itcollege_bg_entities_Vaeosa_kuni" required="true" z="IiIU694t6MwE9NjpAPB+GeD22PQ="/>
-            <field:select field="asukoht" id="c_ee_itcollege_bg_entities_Vaeosa_asukoht" itemValue="id" items="${riigiadminyksuses}" path="/riigiadminyksuses" z="n0B/dqESH14gNa9Vl50/GLkqIO0="/>
+            <field:select field="asukoht" id="c_ee_itcollege_bg_entities_Vaeosa_asukoht" itemValue="id" itemLabel="nimetus" items="${riigiadminyksuses}" path="/riigiadminyksuses" z="n0B/dqESH14gNa9Vl50/GLkqIO0="/>
             <field:select field="parent" id="c_ee_itcollege_bg_entities_Vaeosa_ylemused" itemLabel="kood" itemValue="id" items="${vaeosas}" path="/vaeosas" z="n7uZMKjeUbYIatTryOAoLDLBjFE="/>
         </div>
     </form:create>

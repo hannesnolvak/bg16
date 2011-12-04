@@ -7,7 +7,7 @@
         <field:input field="nimetus" id="c_ee_itcollege_bg_entities_Piiriloik_nimetus" required="true" z="Mf5yzKqXU0bux6EXeeIQ4c5e9VU="/>
         <field:input field="kommentaar" id="c_ee_itcollege_bg_entities_Piiriloik_kommentaar" required="true" z="sa7vykFCsdeEVW9q8aTWMo6AjQ0="/>
         <field:input field="GPS_koordinaadid" id="c_ee_itcollege_bg_entities_Piiriloik_GPS_koordinaadid" required="true" z="5UOAAPVXPYxpMlsPqBsNhxvZbf4="/>
-        <field:select field="haldaja" id="c_ee_itcollege_bg_entities_Piiriloik_haldaja" itemValue="id" items="${piiriloiguhaldajas}" path="/piiriloiguhaldajas" required="true" z="xcfCL0QHxS8ro1FlgJmBJtQorak="/>
+        <field:select field="haldaja" id="c_ee_itcollege_bg_entities_Piiriloik_haldaja" itemValue="id" items="${piiriloiguhaldajas}" path="/piiriloiguhaldajas" z="9W7ablZcIgcny/z/fEWf47327p0="/>
         <field:simple field="vahtkonnad" id="c_ee_itcollege_bg_entities_Piiriloik_vahtkonnad" messageCode="entity_reference_not_managed" messageCodeAttribute="Vahtkond Piiriloigul" z="GGjsMXMO3vlCtWJN3WsKdFtPEOs="/>
     </form:create>
     <form:dependency dependencies="${dependencies}" id="d_ee_itcollege_bg_entities_Piiriloik" render="${not empty dependencies}" z="+uOKndohKYGKov9/WoOgV9muEig="/>

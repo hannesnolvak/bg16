@@ -15,6 +15,7 @@
         <div class="right">
             <field:table columnLabels="Alluvad" columnMaxLengths="25" columnProperties="nimetus" columnTypes="string" data="${alluvad}" id="c_ee_itcollege_bg_entities_Vaeosa_alluvad" path="/vaeosas" update="false" z=""/>
         </div>
+        <field:select field="ylemus" id="c_ee_itcollege_bg_entities_Vaeosa_ylemus" itemValue="id" items="${vaeosaalluvuses}" path="/vaeosaalluvuses" z="n7uZMKjeUbYIatTryOAoLDLBjFE="/>
     </form:create>
     <form:dependency dependencies="${dependencies}" id="d_ee_itcollege_bg_entities_Vaeosa" render="${not empty dependencies}" z="Ru0LwIaLy54q17ssz8Y98ZICQS8="/>
 </div>

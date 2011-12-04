@@ -1,5 +1,8 @@
 package ee.itcollege.bg.web;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -8,6 +11,7 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import ee.itcollege.bg.aruanne.AruandePiiriloik;
 import ee.itcollege.bg.entities.Piiriloik;
 import ee.itcollege.bg.entities.Piiripunkt;
 import ee.itcollege.bg.entities.Vaeosa;
@@ -26,10 +30,22 @@ public class AruandeController {
 		model.addAttribute("vaeosa", vaeosa);
 		model.addAttribute("kp", kp == null ? "2011-11-11" : kp);
 
-		model.addAttribute("vaeosad", Vaeosa.findAllVaeosas());
-		model.addAttribute("piiriloigud", Piiriloik.find(vaeosa, kp));
-		model.addAttribute("piiripunkt", Piiripunkt.find(vaeosa, kp));
+/*		List<AruandePiiriloik> apl = new ArrayList<AruandePiiriloik>();
+		for(Piiriloik p : Piiriloik.find(vaeosa, kp))
+		{
+			apl.add(new AruandePiiriloik(p, kp));
+		}
 
+		List<AruandePiiriloik> app = new ArrayList<AruandePiiriloik>();
+		for(Piiriloik p : Piiriloik.find(vaeosa, kp))
+		{
+			app.add(new AruandePiiriloik(p, kp));
+		}
+		
+		model.addAttribute("vaeosad", Vaeosa.findAllVaeosas());
+		model.addAttribute("piiriloigud", apl);
+		model.addAttribute("piiripunkt", app);
+*/
 		return "aruanne/index";
 	}
 }

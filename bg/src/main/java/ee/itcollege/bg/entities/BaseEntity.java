@@ -5,10 +5,12 @@ import java.util.Date;
 
 import javax.persistence.Access;
 import javax.persistence.AccessType;
+import javax.persistence.EntityManager;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.MappedSuperclass;
+import javax.persistence.PersistenceContext;
 import javax.persistence.PrePersist;
 import javax.persistence.PreRemove;
 import javax.persistence.PreUpdate;
@@ -16,7 +18,13 @@ import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.constraints.Size;
 
-import org.hibernate.annotations.Where;
+import org.hibernate.annotations.Entity;
+import org.hibernate.annotations.Filter;
+import org.hibernate.annotations.FilterDef;
+import org.hibernate.annotations.FilterDefs;
+import org.hibernate.annotations.Filters;
+import org.hibernate.annotations.ParamDef;
+import org.hibernate.classic.Session;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.roo.addon.entity.RooEntity;
 import org.springframework.roo.addon.tostring.RooToString;
@@ -28,13 +36,20 @@ import org.springframework.transaction.annotation.Transactional;
 @RooToString
 @RooEntity(mappedSuperclass = true)
 @Access(AccessType.FIELD)
-//@Where(clause="suletud > NOW()")
-//@Where(clause="suletud >= '9999-12-31'")
+@Entity
+@FilterDefs({
+	@FilterDef(name="suletud"),
+	@FilterDef(name="aeg", parameters=@ParamDef( name="aeg", type="string" ))
+})
+@Filters({
+    @Filter(name="suletud", condition="suletud >= '9999-12-31'"),
+    @Filter(name="aeg", condition="avatud >= :aeg AND suletud <= :aeg")
+})
 public abstract class BaseEntity {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private Long id;
+	protected Long id;
 
 	@Size(max = 32)
 	private String avaja;
@@ -71,6 +86,16 @@ public abstract class BaseEntity {
 		surrogate.set(Calendar.SECOND, 0);
 		surrogate.set(Calendar.MILLISECOND, 0);
 	}
+
+    @PersistenceContext
+    public void setEntityManager(EntityManager entityManager) {
+        this.entityManager = entityManager;
+        
+        /*
+         * FIXXXME: see küll siia ei käi...
+         */
+		((Session) entityManager.getDelegate()).enableFilter("suletud");
+    }
 
 	@PrePersist
 	public void recordCreated() {

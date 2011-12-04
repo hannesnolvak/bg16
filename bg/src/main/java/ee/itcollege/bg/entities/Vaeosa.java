@@ -18,6 +18,7 @@ import org.springframework.roo.addon.entity.RooEntity;
 import org.springframework.roo.addon.javabean.RooJavaBean;
 import org.springframework.roo.addon.tostring.RooToString;
 
+//@RooToString
 @RooJavaBean
 @RooEntity
 public class Vaeosa extends BaseEntity {

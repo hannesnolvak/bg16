@@ -1,17 +1,13 @@
 package ee.itcollege.bg.entities;
 
-import java.util.Collection;
-import java.util.Date;
 import java.util.List;
+import java.util.Set;
 
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
-import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.roo.addon.entity.RooEntity;
 import org.springframework.roo.addon.javabean.RooJavaBean;
 import org.springframework.roo.addon.tostring.RooToString;
@@ -21,13 +17,11 @@ import org.springframework.roo.addon.tostring.RooToString;
 @RooEntity
 public class Piiriloik extends BaseEntity {
 
-	@NotNull
 	@ManyToOne
 	private PiiriloiguHaldaja haldaja;
 	
-	@NotNull
 	@OneToMany(mappedBy="piiriloik")
-	private Collection<VahtkondPiiriloigul> vahtkonnad;
+	private Set<VahtkondPiiriloigul> vahtkonnad;
 	
     @NotNull
     @Size(max = 20)
@@ -41,8 +35,12 @@ public class Piiriloik extends BaseEntity {
 
     @NotNull
     private String GPS_koordinaadid;
-    
-    public static List<Piiriloik> find(String vaeosa, String kp) {
-        return entityManager().createQuery("SELECT o FROM Piiriloik o", Piiriloik.class).getResultList();
+
+/*    public static List<Piiriloik> find(String vaeosa, String kp) {
+        return entityManager().createQuery("SELECT o FROM Piiriloik o WHERE alates >= :kp AND kuni <= :kp AND EXISTS (SELECT 1 FROM PiiripunktiAlluvus WHERE piiripunkt = o AND vaeosa = :vid)", Piiriloik.class).setParameter("vid", vaeosa).setParameter("kp", kp).getResultList();
     }
+
+    public int countVahtkonnad(String kp) {
+        return entityManager().createQuery("SELECT o FROM Piiriloik o WHERE id = :id AND alates >= :kp AND kuni <= :kp", Piiriloik.class).setParameter("id", id).setParameter("kp", kp).getFirstResult();
+    }*/
 }

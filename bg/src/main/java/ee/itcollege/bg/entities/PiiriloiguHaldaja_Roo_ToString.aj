@@ -12,7 +12,6 @@ privileged aspect PiiriloiguHaldaja_Roo_ToString {
         sb.append("Alates: ").append(getAlates()).append(", ");
         sb.append("Avaja: ").append(getAvaja()).append(", ");
         sb.append("Avatud: ").append(getAvatud()).append(", ");
-        sb.append("Id: ").append(getId()).append(", ");
         sb.append("Kommentaar: ").append(getKommentaar()).append(", ");
         sb.append("Kuni: ").append(getKuni()).append(", ");
         sb.append("Muudetud: ").append(getMuudetud()).append(", ");
@@ -21,8 +20,7 @@ privileged aspect PiiriloiguHaldaja_Roo_ToString {
         sb.append("Piiripunkt: ").append(getPiiripunkt()).append(", ");
         sb.append("Suletud: ").append(getSuletud()).append(", ");
         sb.append("Sulgeja: ").append(getSulgeja()).append(", ");
-        sb.append("Vaeosa: ").append(getVaeosa()).append(", ");
-        sb.append("Version: ").append(getVersion());
+        sb.append("Vaeosa: ").append(getVaeosa());
         return sb.toString();
     }
     

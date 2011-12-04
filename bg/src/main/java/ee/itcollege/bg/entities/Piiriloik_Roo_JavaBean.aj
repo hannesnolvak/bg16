@@ -6,7 +6,7 @@ package ee.itcollege.bg.entities;
 import ee.itcollege.bg.entities.PiiriloiguHaldaja;
 import ee.itcollege.bg.entities.VahtkondPiiriloigul;
 import java.lang.String;
-import java.util.Collection;
+import java.util.Set;
 
 privileged aspect Piiriloik_Roo_JavaBean {
     
@@ -18,11 +18,11 @@ privileged aspect Piiriloik_Roo_JavaBean {
         this.haldaja = haldaja;
     }
     
-    public Collection<VahtkondPiiriloigul> Piiriloik.getVahtkonnad() {
+    public Set<VahtkondPiiriloigul> Piiriloik.getVahtkonnad() {
         return this.vahtkonnad;
     }
     
-    public void Piiriloik.setVahtkonnad(Collection<VahtkondPiiriloigul> vahtkonnad) {
+    public void Piiriloik.setVahtkonnad(Set<VahtkondPiiriloigul> vahtkonnad) {
         this.vahtkonnad = vahtkonnad;
     }
     

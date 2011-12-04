@@ -20,6 +20,11 @@ import org.springframework.roo.addon.tostring.RooToString;
 @RooToString
 @RooEntity
 public class Piiripunkt extends BaseEntity {
+
+	/*
+	 * Andmebaasi mudelis piiripunkti ja piirilõigu otsest seost tegelikult ei olnud,
+	 * kuid haldaja pidulikuks määramiseks piiripunkti redaktorist on see siiski vajalik.
+	 */
 	@NotNull
 	@ManyToOne
 	private Piiriloik piiriloik;

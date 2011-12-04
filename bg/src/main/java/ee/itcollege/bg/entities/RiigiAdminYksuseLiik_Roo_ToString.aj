@@ -12,7 +12,6 @@ privileged aspect RiigiAdminYksuseLiik_Roo_ToString {
         sb.append("Alates: ").append(getAlates()).append(", ");
         sb.append("Avaja: ").append(getAvaja()).append(", ");
         sb.append("Avatud: ").append(getAvatud()).append(", ");
-        sb.append("Id: ").append(getId()).append(", ");
         sb.append("Kommentaar: ").append(getKommentaar()).append(", ");
         sb.append("Kood: ").append(getKood()).append(", ");
         sb.append("Kuni: ").append(getKuni()).append(", ");
@@ -20,8 +19,7 @@ privileged aspect RiigiAdminYksuseLiik_Roo_ToString {
         sb.append("Muutja: ").append(getMuutja()).append(", ");
         sb.append("Nimetus: ").append(getNimetus()).append(", ");
         sb.append("Suletud: ").append(getSuletud()).append(", ");
-        sb.append("Sulgeja: ").append(getSulgeja()).append(", ");
-        sb.append("Version: ").append(getVersion());
+        sb.append("Sulgeja: ").append(getSulgeja());
         return sb.toString();
     }
     

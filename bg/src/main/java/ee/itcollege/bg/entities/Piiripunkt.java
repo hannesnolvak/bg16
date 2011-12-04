@@ -28,19 +28,17 @@ public class Piiripunkt extends BaseEntity {
 	@NotNull
 	@ManyToOne
 	private Piiriloik piiriloik;
-
-	@NotNull
+	
 	@ManyToOne
 	private Vaeosa allub;
 	
-	@NotNull
 	@OneToMany(mappedBy="piiripunkt")
 	private Collection<Vahtkond> vahtkonnad;
 	
     @NotNull
     @Size(max = 20)
     private String kood;
-
+    
     @NotNull
     private String nimetus;
 

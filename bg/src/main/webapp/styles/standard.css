@@ -328,7 +328,7 @@ fieldset th {
 	border:none;
 }
 
-.submit input {
+.submit input, .button {
 	border: 1px solid #BBBBBB;
 	color:#777777;
 	padding:2px 7px;
@@ -373,16 +373,25 @@ fieldset th {
 }
 
 
-.left, .right
+.left, .right, .right-outer
 {
 	width: 50%;
 	display: inline-block;
 	vertical-align: top;
 }
 
+.right-outer
+{
+	margin-left: -50%;
+	margin-top: 30px;
+	float: right;
+}
+
 .submit
 {
 	text-align: right;
+	clear: both;
+	width: 100%;
 }
 
 .dijitTextBox
@@ -395,9 +404,24 @@ fieldset th {
 	max-width: 11.5em;
 }
 
+.table-new
+{
+	text-align: right;
+	margin: 10px 0;
+}
 
+.table-new a
+{
+	color: #666;
+	text-decoration: none;
+	background: #f7f7f7;
+	padding: 4px 7px;
+}
 
-
+.tundra .dijitTitlePaneContentOuter
+{
+	border: 0;
+}
 
 
 

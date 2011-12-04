@@ -92,7 +92,7 @@ public abstract class BaseEntity {
         this.entityManager = entityManager;
         
         /*
-         * FIXXXME: see küll siia ei käi...
+         * FIXXXME: see küll siia vist ei käi...
          */
 		((Session) entityManager.getDelegate()).enableFilter("suletud");
     }

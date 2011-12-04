@@ -1,6 +1,7 @@
 package ee.itcollege.bg.entities;
 
 import java.util.Date;
+import java.util.List;
 
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
@@ -40,4 +41,14 @@ public class VaeosaAlluvus extends BaseEntity {
     @Temporal(TemporalType.TIMESTAMP)
 	@DateTimeFormat(pattern="yyyy-MM-dd")
     private Date kuni;
+    
+    public String getChildName()
+    {
+    	return alluv.getNimetus();
+    }
+    
+    public static List<VaeosaAlluvus> findAllVaeosaAlluvuses()
+    {
+    	return entityManager().createQuery("SELECT o FROM VaeosaAlluvus o WHERE suletud >= '9999-12-31'", VaeosaAlluvus.class).getResultList();
+    }
 }

@@ -6,14 +6,15 @@ import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.hibernate.classic.Session;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import ee.itcollege.bg.aruanne.AruandePiiriloik;
+import ee.itcollege.bg.entities.BaseEntity;
 import ee.itcollege.bg.entities.Piiriloik;
-import ee.itcollege.bg.entities.Piiripunkt;
 import ee.itcollege.bg.entities.Vaeosa;
 
 @Controller
@@ -27,10 +28,19 @@ public class AruandeController {
 			ModelMap model, HttpServletRequest request,
 			HttpServletResponse response) {
 
-		model.addAttribute("vaeosa", vaeosa);
-		model.addAttribute("kp", kp == null ? "2011-11-11" : kp);
+		if(kp == null)
+		{
+			kp = "2011-12-04";
+		}
 
-/*		List<AruandePiiriloik> apl = new ArrayList<AruandePiiriloik>();
+		model.addAttribute("vaeosa", vaeosa);
+		model.addAttribute("kp", kp);
+		
+		Session sess = ((Session) BaseEntity.entityManager().getDelegate());
+		sess.disableFilter("suletud");
+		sess.enableFilter("aeg").setParameter("aeg", kp);
+		
+		List<AruandePiiriloik> apl = new ArrayList<AruandePiiriloik>();
 		for(Piiriloik p : Piiriloik.find(vaeosa, kp))
 		{
 			apl.add(new AruandePiiriloik(p, kp));
@@ -45,7 +55,7 @@ public class AruandeController {
 		model.addAttribute("vaeosad", Vaeosa.findAllVaeosas());
 		model.addAttribute("piiriloigud", apl);
 		model.addAttribute("piiripunkt", app);
-*/
+
 		return "aruanne/index";
 	}
 }

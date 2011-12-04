@@ -29,7 +29,7 @@ public class RiigiAdminYksus extends BaseEntity {
 	@ManyToOne
 	private RiigiAdminYksuseLiik liik;
 */
-
+	
     @NotNull
     private String kommentaar;
 

@@ -36,11 +36,7 @@ public class Piiriloik extends BaseEntity {
     @NotNull
     private String GPS_koordinaadid;
 
-/*    public static List<Piiriloik> find(String vaeosa, String kp) {
-        return entityManager().createQuery("SELECT o FROM Piiriloik o WHERE alates >= :kp AND kuni <= :kp AND EXISTS (SELECT 1 FROM PiiripunktiAlluvus WHERE piiripunkt = o AND vaeosa = :vid)", Piiriloik.class).setParameter("vid", vaeosa).setParameter("kp", kp).getResultList();
+    public static List<Piiriloik> find(String vaeosa, String kp) {
+        return entityManager().createQuery("SELECT o FROM Piiriloik o WHERE EXISTS (SELECT 1 FROM PiiripunktiAlluvus a WHERE a.piiripunkt = o AND a.vaeosa = :vid AND avatud >= :kp AND suletud <= :kp)", Piiriloik.class).setParameter("vid", vaeosa).setParameter("kp", kp).getResultList();
     }
-
-    public int countVahtkonnad(String kp) {
-        return entityManager().createQuery("SELECT o FROM Piiriloik o WHERE id = :id AND alates >= :kp AND kuni <= :kp", Piiriloik.class).setParameter("id", id).setParameter("kp", kp).getFirstResult();
-    }*/
 }

@@ -6,8 +6,8 @@ package ee.itcollege.bg.entities;
 import ee.itcollege.bg.entities.RiigiAdminYksus;
 import ee.itcollege.bg.entities.VaeosaAlluvus;
 import java.lang.String;
+import java.util.Collection;
 import java.util.Date;
-import java.util.Set;
 
 privileged aspect Vaeosa_Roo_JavaBean {
     
@@ -19,11 +19,11 @@ privileged aspect Vaeosa_Roo_JavaBean {
         this.ylemus = ylemus;
     }
     
-    public Set<VaeosaAlluvus> Vaeosa.getAlluvad() {
+    public Collection<VaeosaAlluvus> Vaeosa.getAlluvad() {
         return this.alluvad;
     }
     
-    public void Vaeosa.setAlluvad(Set<VaeosaAlluvus> alluvad) {
+    public void Vaeosa.setAlluvad(Collection<VaeosaAlluvus> alluvad) {
         this.alluvad = alluvad;
     }
     

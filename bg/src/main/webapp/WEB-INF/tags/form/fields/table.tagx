@@ -127,7 +127,7 @@
                     <spring:message code="entity_delete_confirm" />
                   </spring:escapeBody>
                 </c:set>
-                <input alt="${fn:escapeXml(delete_label)}" class="image" src="${fn:escapeXml(delete_image_url)}" title="${fn:escapeXml(delete_label)}" type="image" value="${fn:escapeXml(delete_label)}" onclick="return confirm('${delete_confirm_msg}');" />
+                <input class="button" title="${fn:escapeXml(delete_label)}" type="submit" value="Eemalda" onclick="return confirm('${delete_confirm_msg}');" />
                 <c:if test="${not empty param.page}">
                   <input name="page" type="hidden" value="1" />
                 </c:if>
@@ -139,28 +139,29 @@
           </c:if>
         </tr>
       </c:forEach>
+      <c:if test="${not empty maxPages}">
       <tr class="footer">
         <td colspan="${colCounter}">
-          <c:if test="${empty create or create}">
-            <span class="new">
-              <spring:url value="${path}" var="create_url">
-                <spring:param name="form" />
-              </spring:url>
-              <a href="${fn:escapeXml(create_url)}">
-                <spring:url value="/resources/images/add.png" var="create_img_url" />
-                <spring:message arguments="${typeName}" code="global_menu_new" var="add_message" htmlEscape="false" />
-                <img alt="${fn:escapeXml(add_message)}" src="${fn:escapeXml(create_img_url)}" title="${fn:escapeXml(add_message)}" />
-              </a>
-            </span>
-            <c:out value=" " />
-          </c:if>
-          <c:if test="${not empty maxPages}">
             <util:pagination maxPages="${maxPages}" page="${param.page}" size="${param.size}" />
-          </c:if>
         </td>
       </tr>
+      </c:if>
     </table>
-
+    <div class="table-new">
+    <c:if test="${empty create or create}">
+      <span class="new">
+        <spring:url value="${path}" var="create_url">
+          <spring:param name="form" />
+        </spring:url>
+        <a href="${fn:escapeXml(create_url)}" class="button">
+          <spring:url value="/resources/images/add.png" var="create_img_url" />
+          <spring:message arguments="${typeName}" code="global_menu_new" var="add_message" htmlEscape="false" />
+          <span title="${fn:escapeXml(add_message)}">Lisa</span>
+        </a>
+      </span>
+      <c:out value=" " />
+    </c:if>
+	</div>
   </c:if>
 
 </jsp:root>

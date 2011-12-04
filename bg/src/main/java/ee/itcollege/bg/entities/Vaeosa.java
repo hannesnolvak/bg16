@@ -1,7 +1,7 @@
 package ee.itcollege.bg.entities;
 
+import java.util.Collection;
 import java.util.Date;
-import java.util.Set;
 
 import javax.persistence.CascadeType;
 import javax.persistence.JoinColumn;
@@ -16,7 +16,6 @@ import javax.validation.constraints.Size;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.roo.addon.entity.RooEntity;
 import org.springframework.roo.addon.javabean.RooJavaBean;
-import org.springframework.roo.addon.tostring.RooToString;
 
 //@RooToString
 @RooJavaBean
@@ -27,7 +26,7 @@ public class Vaeosa extends BaseEntity {
 	private VaeosaAlluvus ylemus;
 
 	@OneToMany(mappedBy="ylem", cascade = CascadeType.ALL)
-	private Set<VaeosaAlluvus> alluvad;
+	private Collection<VaeosaAlluvus> alluvad;
 	
 	@ManyToOne
     @JoinColumn(name="riigi_admin_yksus_ID")

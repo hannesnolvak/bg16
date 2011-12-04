@@ -8,7 +8,8 @@
             <table:column id="c_ee_itcollege_bg_entities_RiigiAdminYksus_kood" property="kood" z="hhZrxSDS1ysSVa8eGos7a6tc2QM="/>
             <table:column id="c_ee_itcollege_bg_entities_RiigiAdminYksus_nimetus" property="nimetus" z="uUdkqKkTWhPVZp9GnWN38gka79I="/>
             <table:column date="true" dateTimePattern="${riigiAdminYksus_alates_date_format}" id="c_ee_itcollege_bg_entities_RiigiAdminYksus_alates" property="alates" z="zJRtGrfzGkgFPbBKvjCK/W83mL8="/>
-            <table:column date="true" dateTimePattern="${riigiAdminYksus_kuni_date_format}" id="c_ee_itcollege_bg_entities_RiigiAdminYksus_kuni" property="kuni" z="+y4eRQlmHps2KBocHynHPyW4wQ8="/>
+            <table:column id="c_ee_itcollege_bg_entities_RiigiAdminYksus_ylemused" property="ylemused" z="0myOXbkK5WG/weWP0WSP52xdVOM="/>
+            <table:column id="c_ee_itcollege_bg_entities_RiigiAdminYksus_alluvad" property="alluvad" z="obDwNykotnTytu/di3dHWq4Ui4w="/>
         </table:table>
     </page:list>
 </div>

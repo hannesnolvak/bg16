@@ -8,5 +8,7 @@
         <field:textarea field="nimetus" id="c_ee_itcollege_bg_entities_RiigiAdminYksus_nimetus" required="true" z="UcldRM4NICXkVyW08KM7D0wOVGI="/>
         <field:datetime dateTimePattern="${riigiAdminYksus_alates_date_format}" field="alates" id="c_ee_itcollege_bg_entities_RiigiAdminYksus_alates" required="true" z="IMpeVCw6ahilfrrQwD7DLS5o2sI="/>
         <field:datetime dateTimePattern="${riigiAdminYksus_kuni_date_format}" field="kuni" id="c_ee_itcollege_bg_entities_RiigiAdminYksus_kuni" required="true" z="iiwmdsAbjyOhN+WJcs+mtuxjdWU="/>
+        <field:select field="ylemused" id="c_ee_itcollege_bg_entities_RiigiAdminYksus_ylemused" itemValue="id" items="${riigiadminyksuses}" path="/riigiadminyksuses" z="user-managed"/>
+        <field:select field="alluvad" id="c_ee_itcollege_bg_entities_RiigiAdminYksus_alluvad" itemValue="id" items="${riigiadminyksuses}" path="/riigiadminyksuses" z="user-managed"/>
     </form:update>
 </div>

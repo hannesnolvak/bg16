@@ -13,5 +13,6 @@
         <field:input field="GPS_Longitude" id="c_ee_itcollege_bg_entities_Piiripunkt_GPS_Longitude" required="true" z="29i2dn06z62ioagiZ9EVIhPrWyY="/>
         <field:input field="GPS_Latitude" id="c_ee_itcollege_bg_entities_Piiripunkt_GPS_Latitude" required="true" z="vOShhtnTMNxWZGyCKkpiE/Fhtn0="/>
         <field:input field="korgus_merepinnast" id="c_ee_itcollege_bg_entities_Piiripunkt_korgus_merepinnast" required="true" z="ybQVp4NMHIQK98b/x+ymnojwcOA="/>
+        <field:select field="piiriloik" id="c_ee_itcollege_bg_entities_Piiripunkt_piiriloik" itemValue="id" items="${piiriloiks}" path="/piiriloiks" required="true" z="WbF7eCPkDcts89lS+RZeXFILRWQ="/>
     </form:update>
 </div>

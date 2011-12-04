@@ -4,6 +4,7 @@ import java.util.Date;
 
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.constraints.NotNull;
@@ -16,6 +17,7 @@ import org.springframework.roo.addon.tostring.RooToString;
 @RooJavaBean
 @RooToString
 @RooEntity
+@Table(name="vaeosa_alluvus")
 public class VaeosaAlluvus extends BaseEntity {
 
 	@ManyToOne

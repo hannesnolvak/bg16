@@ -12,5 +12,6 @@
         <field:display field="GPS_Latitude" id="s_ee_itcollege_bg_entities_Piiripunkt_GPS_Latitude" object="${piiripunkt}" z="B4IAQhEingZbeHpBQDlhJsLpu38="/>
         <field:display field="korgus_merepinnast" id="s_ee_itcollege_bg_entities_Piiripunkt_korgus_merepinnast" object="${piiripunkt}" z="MiHEqyPsK/6Xud8gqij91/Prnjg="/>
         <field:display field="allub" id="s_ee_itcollege_bg_entities_Piiripunkt_allub" object="${piiripunkt}" z="Rsiug7i/vxggTdx379aai8O9TBU="/>
+        <field:display field="piiriloik" id="s_ee_itcollege_bg_entities_Piiripunkt_piiriloik" object="${piiripunkt}" z="lvDQKb9kICmonv5N2QQpulKZZbk="/>
     </page:show>
 </div>

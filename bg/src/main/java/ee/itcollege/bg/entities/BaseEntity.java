@@ -16,6 +16,7 @@ import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.constraints.Size;
 
+import org.hibernate.annotations.Where;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.roo.addon.entity.RooEntity;
 import org.springframework.roo.addon.tostring.RooToString;
@@ -27,6 +28,8 @@ import org.springframework.transaction.annotation.Transactional;
 @RooToString
 @RooEntity(mappedSuperclass = true)
 @Access(AccessType.FIELD)
+//@Where(clause="suletud > NOW()")
+//@Where(clause="suletud >= '9999-12-31'")
 public abstract class BaseEntity {
 
 	@Id

@@ -6,24 +6,24 @@ package ee.itcollege.bg.entities;
 import ee.itcollege.bg.entities.RiigiAdminYksus;
 import ee.itcollege.bg.entities.VaeosaAlluvus;
 import java.lang.String;
-import java.util.Collection;
 import java.util.Date;
+import java.util.Set;
 
 privileged aspect Vaeosa_Roo_JavaBean {
     
-    public Collection<VaeosaAlluvus> Vaeosa.getYlemused() {
-        return this.ylemused;
+    public VaeosaAlluvus Vaeosa.getYlemus() {
+        return this.ylemus;
     }
     
-    public void Vaeosa.setYlemused(Collection<VaeosaAlluvus> ylemused) {
-        this.ylemused = ylemused;
+    public void Vaeosa.setYlemus(VaeosaAlluvus ylemus) {
+        this.ylemus = ylemus;
     }
     
-    public Collection<VaeosaAlluvus> Vaeosa.getAlluvad() {
+    public Set<VaeosaAlluvus> Vaeosa.getAlluvad() {
         return this.alluvad;
     }
     
-    public void Vaeosa.setAlluvad(Collection<VaeosaAlluvus> alluvad) {
+    public void Vaeosa.setAlluvad(Set<VaeosaAlluvus> alluvad) {
         this.alluvad = alluvad;
     }
     

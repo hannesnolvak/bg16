@@ -3,11 +3,12 @@
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
     <page:show id="ps_ee_itcollege_bg_entities_Vaeosa" object="${vaeosa}" path="/vaeosas" z="i2lAIIvyoSnMVXVbuDTQlogf70k=">
+        <field:display field="asukoht" id="s_ee_itcollege_bg_entities_Vaeosa_asukoht" object="${vaeosa}" z="59h3xWAv+dxP3nh8fq1qZffXdII="/>
         <field:display field="kood" id="s_ee_itcollege_bg_entities_Vaeosa_kood" object="${vaeosa}" z="SruebhRK/80PS/Pc/Tlq/xQzQxA="/>
         <field:display field="nimetus" id="s_ee_itcollege_bg_entities_Vaeosa_nimetus" object="${vaeosa}" z="zJxnSik6mfZmshduW+kRkBof1eM="/>
         <field:display field="kommentaar" id="s_ee_itcollege_bg_entities_Vaeosa_kommentaar" object="${vaeosa}" z="od5FtJtdy3k5qpXabvLcMinU+BU="/>
         <field:display date="true" dateTimePattern="${vaeosa_alates_date_format}" field="alates" id="s_ee_itcollege_bg_entities_Vaeosa_alates" object="${vaeosa}" z="p36J/bw1+MheesTvAia784KDQxI="/>
         <field:display date="true" dateTimePattern="${vaeosa_kuni_date_format}" field="kuni" id="s_ee_itcollege_bg_entities_Vaeosa_kuni" object="${vaeosa}" z="UJgPOoJuI4BHIWgmYOHsAUnzN6w="/>
-        <field:display field="asukoht" id="s_ee_itcollege_bg_entities_Vaeosa_asukoht" object="${vaeosa}" z="59h3xWAv+dxP3nh8fq1qZffXdII="/>
+        <field:display field="ylemus" id="s_ee_itcollege_bg_entities_Vaeosa_ylemus" object="${vaeosa}" z="6Kw3wEWR0nESRlHbB8/PjO3WCnE="/>
     </page:show>
 </div>

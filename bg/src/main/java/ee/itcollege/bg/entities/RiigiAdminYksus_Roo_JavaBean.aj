@@ -3,10 +3,28 @@
 
 package ee.itcollege.bg.entities;
 
+import ee.itcollege.bg.entities.AdminAlluvus;
 import java.lang.String;
 import java.util.Date;
+import java.util.Set;
 
 privileged aspect RiigiAdminYksus_Roo_JavaBean {
+    
+    public Set<AdminAlluvus> RiigiAdminYksus.getYlemused() {
+        return this.ylemused;
+    }
+    
+    public void RiigiAdminYksus.setYlemused(Set<AdminAlluvus> ylemused) {
+        this.ylemused = ylemused;
+    }
+    
+    public Set<AdminAlluvus> RiigiAdminYksus.getAlluvad() {
+        return this.alluvad;
+    }
+    
+    public void RiigiAdminYksus.setAlluvad(Set<AdminAlluvus> alluvad) {
+        this.alluvad = alluvad;
+    }
     
     public String RiigiAdminYksus.getKommentaar() {
         return this.kommentaar;

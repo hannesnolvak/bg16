@@ -3,6 +3,7 @@
 
 package ee.itcollege.bg.entities;
 
+import ee.itcollege.bg.entities.Piiriloik;
 import ee.itcollege.bg.entities.Vaeosa;
 import ee.itcollege.bg.entities.Vahtkond;
 import java.lang.Number;
@@ -11,6 +12,14 @@ import java.util.Collection;
 import java.util.Date;
 
 privileged aspect Piiripunkt_Roo_JavaBean {
+    
+    public Piiriloik Piiripunkt.getPiiriloik() {
+        return this.piiriloik;
+    }
+    
+    public void Piiripunkt.setPiiriloik(Piiriloik piiriloik) {
+        this.piiriloik = piiriloik;
+    }
     
     public Vaeosa Piiripunkt.getAllub() {
         return this.allub;

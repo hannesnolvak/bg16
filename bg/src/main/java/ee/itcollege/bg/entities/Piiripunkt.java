@@ -20,11 +20,9 @@ import org.springframework.roo.addon.tostring.RooToString;
 @RooToString
 @RooEntity
 public class Piiripunkt extends BaseEntity {
-/*
 	@NotNull
 	@ManyToOne
 	private Piiriloik piiriloik;
-*/
 
 	@NotNull
 	@ManyToOne

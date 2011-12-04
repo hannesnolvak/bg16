@@ -9,12 +9,12 @@
             <field:textarea field="kommentaar" id="c_ee_itcollege_bg_entities_Vaeosa_kommentaar" required="true" z="user-managed"/>
             <field:datetime dateTimePattern="${vaeosa_alates_date_format}" field="alates" id="c_ee_itcollege_bg_entities_Vaeosa_alates" required="true" z="bbbXb8J1dyNwqoLQYdJjW/4TVh4="/>
             <field:datetime dateTimePattern="${vaeosa_kuni_date_format}" field="kuni" id="c_ee_itcollege_bg_entities_Vaeosa_kuni" required="true" z="IiIU694t6MwE9NjpAPB+GeD22PQ="/>
-            <field:select field="ylemused" id="c_ee_itcollege_bg_entities_Vaeosa_ylemused" itemLabel="kood" itemValue="ylemused" items="${vaeosas}" path="/vaeosas" z="user-managed"/>
+            <field:select field="asukoht" id="c_ee_itcollege_bg_entities_Vaeosa_asukoht" itemValue="id" items="${riigiadminyksuses}" path="/riigiadminyksuses" z="n0B/dqESH14gNa9Vl50/GLkqIO0="/>
+            <field:select field="parent" id="c_ee_itcollege_bg_entities_Vaeosa_ylemused" itemLabel="kood" itemValue="parent" items="${vaeosas}" path="/vaeosas" z="user-managed"/>
         </div>
         <div class="right">
-            <field:table columnLabels="Alluvad" columnMaxLengths="25" columnProperties="nimetus" columnTypes="string" data="${vaeosas}" id="c_ee_itcollege_bg_entities_Vaeosa_alluvad" path="/vaeosas" update="false" z=""/>
+            <field:table columnLabels="Alluvad" columnMaxLengths="25" columnProperties="nimetus" columnTypes="string" data="${alluvad}" id="c_ee_itcollege_bg_entities_Vaeosa_alluvad" path="/vaeosas" update="false" z=""/>
         </div>
-        <field:select field="asukoht" id="c_ee_itcollege_bg_entities_Vaeosa_asukoht" itemValue="id" items="${riigiadminyksuses}" path="/riigiadminyksuses" z="n0B/dqESH14gNa9Vl50/GLkqIO0="/>
     </form:create>
     <form:dependency dependencies="${dependencies}" id="d_ee_itcollege_bg_entities_Vaeosa" render="${not empty dependencies}" z="Ru0LwIaLy54q17ssz8Y98ZICQS8="/>
 </div>

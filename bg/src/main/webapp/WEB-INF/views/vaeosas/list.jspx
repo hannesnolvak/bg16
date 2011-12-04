@@ -4,12 +4,14 @@
     <jsp:output omit-xml-declaration="yes"/>
     <page:list id="pl_ee_itcollege_bg_entities_Vaeosa" items="${vaeosas}" z="XPKxxdqkbHCATbsimJdQc3kez4o=">
         <table:table data="${vaeosas}" id="l_ee_itcollege_bg_entities_Vaeosa" path="/vaeosas" z="DxkCMAymKstthr2q0j7VIycfnZ8=">
-            <table:column id="c_ee_itcollege_bg_entities_Vaeosa_ylemused" property="ylemused" z="gsOfhp0d+WRf85PEXXlbKpGqjDA="/>
             <table:column id="c_ee_itcollege_bg_entities_Vaeosa_alluvad" property="alluvad" z="TgQxFuXgcJ2to4Rd/vrSJKZ5UVY="/>
             <table:column id="c_ee_itcollege_bg_entities_Vaeosa_asukoht" property="asukoht" z="PGm+Z1SyHpoD/WrH2FBQPBbcZHc="/>
             <table:column id="c_ee_itcollege_bg_entities_Vaeosa_kood" property="kood" z="kchJHVPsqLZlZeAs+6gf8/9Io3k="/>
             <table:column id="c_ee_itcollege_bg_entities_Vaeosa_nimetus" property="nimetus" z="5/bQwZpj7mOsCqjmc2C8h6IjY/Y="/>
             <table:column id="c_ee_itcollege_bg_entities_Vaeosa_kommentaar" property="kommentaar" z="dlWBPVgL2nK9OpXw2HrPPX0S2Po="/>
+            <table:column id="c_ee_itcollege_bg_entities_Vaeosa_ylemus" property="ylemus" z="kUd/ZEeU+m6a0vySw6XKdeucWCo="/>
+            <table:column id="c_ee_itcollege_bg_entities_Vaeosa_avatud" property="avatud" z=""/>
+            <table:column id="c_ee_itcollege_bg_entities_Vaeosa_suletud" property="suletud" z=""/>
         </table:table>
     </page:list>
 </div>

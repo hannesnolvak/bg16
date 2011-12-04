@@ -1,11 +1,13 @@
 package ee.itcollege.bg.entities;
 
-import java.util.Collection;
 import java.util.Date;
+import java.util.Set;
 
+import javax.persistence.CascadeType;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.constraints.NotNull;
@@ -17,16 +19,15 @@ import org.springframework.roo.addon.javabean.RooJavaBean;
 import org.springframework.roo.addon.tostring.RooToString;
 
 @RooJavaBean
-@RooToString
 @RooEntity
 public class Vaeosa extends BaseEntity {
+	
+	@OneToOne(mappedBy="alluv", cascade = CascadeType.ALL)
+	private VaeosaAlluvus ylemus;
 
-	@OneToMany(mappedBy="ylem")
-	private Collection<VaeosaAlluvus> ylemused;
-
-	@OneToMany(mappedBy="alluv")
-	private Collection<VaeosaAlluvus> alluvad;
-
+	@OneToMany(mappedBy="ylem", cascade = CascadeType.ALL)
+	private Set<VaeosaAlluvus> alluvad;
+	
 	@ManyToOne
     @JoinColumn(name="riigi_admin_yksus_ID")
     private RiigiAdminYksus asukoht;
@@ -50,4 +51,46 @@ public class Vaeosa extends BaseEntity {
     @Temporal(TemporalType.TIMESTAMP)
 	@DateTimeFormat(pattern="yyyy-MM-dd")
     private Date kuni;
+    
+    public Vaeosa getParent()
+    {
+    	if(ylemus == null)
+    		return null;
+    	
+    	return ylemus.getYlem();
+    }
+    
+    public void setParent(Vaeosa what)
+    {
+    	if(what != null && ylemus != null)
+    	{
+    		if(what.equals(ylemus))
+    		{
+    			return;
+    		}
+
+    		ylemus.close();
+    		ylemus.persist();
+    	}
+
+    	VaeosaAlluvus a = new VaeosaAlluvus();
+    	
+    	if(ylemus == null)
+    	{
+    		a.setAlates(new Date());
+    		a.setKuni(BaseEntity.surrogate.getTime());
+    		a.setKommentaar("");
+    	}
+    	else
+    	{
+	    	a.setAlates(ylemus.getAlates());
+	    	a.setKuni(ylemus.getKuni());
+	    	a.setKommentaar(ylemus.getKommentaar());
+    	}
+
+    	a.setAlluv(this);
+    	a.setYlem(what);
+    	
+    	ylemus = a;
+    }
 }

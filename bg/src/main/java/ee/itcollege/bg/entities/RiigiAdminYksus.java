@@ -1,9 +1,8 @@
 package ee.itcollege.bg.entities;
 
-import java.util.Collection;
 import java.util.Date;
+import java.util.Set;
 
-import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -19,13 +18,13 @@ import org.springframework.roo.addon.tostring.RooToString;
 @RooToString
 @RooEntity
 public class RiigiAdminYksus extends BaseEntity {
-/*
-	@OneToMany(mappedBy="ylem")
-	private Collection<AdminAlluvus> ylemused;
 
 	@OneToMany(mappedBy="alluv")
-	private Collection<AdminAlluvus> alluvad;
-*/
+	private Set<AdminAlluvus> ylemused;
+
+	@OneToMany(mappedBy="ylem")
+	private Set<AdminAlluvus> alluvad;
+
 /*
 	@ManyToOne
 	private RiigiAdminYksuseLiik liik;

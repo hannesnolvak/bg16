@@ -9,7 +9,7 @@
             <table:column id="c_ee_itcollege_bg_entities_Piiripunkt_kood" property="kood" z="mYv8mLh7DqXlpjUeQ+hxfedMCPY="/>
             <table:column id="c_ee_itcollege_bg_entities_Piiripunkt_nimetus" property="nimetus" z="X5eT914HHUGiL9BRk2OLvGnjbcU="/>
             <table:column id="c_ee_itcollege_bg_entities_Piiripunkt_kommentaar" property="kommentaar" z="5reAuJkxUAS2V2DlQusAy28X8rw="/>
-            <table:column date="true" dateTimePattern="${piiripunkt_alates_date_format}" id="c_ee_itcollege_bg_entities_Piiripunkt_alates" property="alates" z="NS16ZbQFmhXgqwuW9/UrVX7fBus="/>
+            <table:column id="c_ee_itcollege_bg_entities_Piiripunkt_piiriloik" property="piiriloik" z="m0To8Ty4I9xU7ksr2H67lVCjz7w="/>
         </table:table>
     </page:list>
 </div>

@@ -3,13 +3,13 @@
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
     <form:create id="fc_ee_itcollege_bg_entities_Vahtkond" modelAttribute="vahtkond" path="/vahtkonds" render="${empty dependencies}" z="VsmesynBSDbjx/7XF+KMOdVi5U0=">
-        <field:select field="piiripunkt" id="c_ee_itcollege_bg_entities_Vahtkond_piiripunkt" itemValue="id" items="${piiripunkts}" path="/piiripunkts" required="true" z="gxnZN/KwGb9lEvcwTwa7v4GjCVM="/>
+        <field:select field="piiripunkt" id="c_ee_itcollege_bg_entities_Vahtkond_piiripunkt" itemLabel="kood" itemValue="id" items="${piiripunkts}" path="/piiripunkts" required="true" z="gxnZN/KwGb9lEvcwTwa7v4GjCVM="/>
         <field:input field="kood" id="c_ee_itcollege_bg_entities_Vahtkond_kood" max="20" required="true" z="bJAJTwflsxkyWHmpl8CUr6RTQnM="/>
         <field:input field="nimetus" id="c_ee_itcollege_bg_entities_Vahtkond_nimetus" required="true" z="2JFgmuN+0HifpBU/JH9OruLJaEc="/>
         <field:input field="kommentaar" id="c_ee_itcollege_bg_entities_Vahtkond_kommentaar" required="true" z="/dvMy8diwP7iWqtGcGgvccF/x8E="/>
         <field:datetime dateTimePattern="${vahtkond_alates_date_format}" field="alates" id="c_ee_itcollege_bg_entities_Vahtkond_alates" required="true" z="D+DSeoSZwadP3TCGlzDvXE7WI70="/>
         <field:datetime dateTimePattern="${vahtkond_kuni_date_format}" field="kuni" id="c_ee_itcollege_bg_entities_Vahtkond_kuni" required="true" z="/2M94JeXdaFZGpGtGkNa50dVxPQ="/>
-        <field:select field="vaeosa" id="c_ee_itcollege_bg_entities_Vahtkond_vaeosa" itemValue="id" items="${vaeosas}" path="/vaeosas" required="true" z="rMeSu9RnEJm1QYTnbU2SBbperBU="/>
+        <field:select field="vaeosa" id="c_ee_itcollege_bg_entities_Vahtkond_vaeosa" itemLabel="kood" itemValue="id" items="${vaeosas}" path="/vaeosas" required="true" z="rMeSu9RnEJm1QYTnbU2SBbperBU="/>
     </form:create>
     <form:dependency dependencies="${dependencies}" id="d_ee_itcollege_bg_entities_Vahtkond" render="${not empty dependencies}" z="U7nqlHghZPo4VopftC52BqPSyOM="/>
 </div>

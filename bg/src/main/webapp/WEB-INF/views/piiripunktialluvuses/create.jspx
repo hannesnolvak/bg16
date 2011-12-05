@@ -3,8 +3,8 @@
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
     <form:create id="fc_ee_itcollege_bg_entities_PiiripunktiAlluvus" modelAttribute="piiripunktiAlluvus" path="/piiripunktialluvuses" render="${empty dependencies}" z="PDghKEbFSPMpCjIz3ksoAqq00r0=">
-        <field:select field="vaeosa" id="c_ee_itcollege_bg_entities_PiiripunktiAlluvus_vaeosa" itemValue="id" items="${vaeosas}" path="/vaeosas" required="true" z="ul9/Eg8BacbGoK6TZRGZJ9pLak4="/>
-        <field:select field="piiripunkt" id="c_ee_itcollege_bg_entities_PiiripunktiAlluvus_piiripunkt" itemValue="id" items="${piiripunkts}" path="/piiripunkts" required="true" z="7yrj4LahUwMsr1yqc2mSy3Tob88="/>
+        <field:select field="vaeosa" id="c_ee_itcollege_bg_entities_PiiripunktiAlluvus_vaeosa" itemLabel="kood" itemValue="id" items="${vaeosas}" path="/vaeosas" required="true" z="ul9/Eg8BacbGoK6TZRGZJ9pLak4="/>
+        <field:select field="piiripunkt" id="c_ee_itcollege_bg_entities_PiiripunktiAlluvus_piiripunkt" itemLabel="kood" itemValue="id" items="${piiripunkts}" path="/piiripunkts" required="true" z="7yrj4LahUwMsr1yqc2mSy3Tob88="/>
         <field:input field="kommentaar" id="c_ee_itcollege_bg_entities_PiiripunktiAlluvus_kommentaar" required="true" z="++HnG3KKwWL8JUySyiscuEvEwNA="/>
         <field:datetime dateTimePattern="${piiripunktiAlluvus_alates_date_format}" field="alates" id="c_ee_itcollege_bg_entities_PiiripunktiAlluvus_alates" required="true" z="AEw6lSVORLvmE83MyE3W4paUEbA="/>
         <field:datetime dateTimePattern="${piiripunktiAlluvus_kuni_date_format}" field="kuni" id="c_ee_itcollege_bg_entities_PiiripunktiAlluvus_kuni" required="true" z="dZYZyv0jEDqp0fSpWVuyhHw8O1g="/>

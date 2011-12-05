@@ -3,8 +3,8 @@
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
     <form:update id="fu_ee_itcollege_bg_entities_VahtkondPiiriloigul" modelAttribute="vahtkondPiiriloigul" path="/vahtkondpiiriloiguls" versionField="Version" z="i2iaoE41e2TyS/Yjk8RtNqip4UE=">
-        <field:select field="vahtkond" id="c_ee_itcollege_bg_entities_VahtkondPiiriloigul_vahtkond" itemValue="id" items="${vahtkonds}" path="/vahtkonds" required="true" z="gWOjFzYIBwzTd2Asxil58mugGWE="/>
-        <field:select field="piiriloik" id="c_ee_itcollege_bg_entities_VahtkondPiiriloigul_piiriloik" itemValue="id" items="${piiriloiks}" path="/piiriloiks" required="true" z="USYQ4zaUv+7d7Kl1vRtYPJgu1Yg="/>
+        <field:select field="vahtkond" id="c_ee_itcollege_bg_entities_VahtkondPiiriloigul_vahtkond" itemLabel="kood" itemValue="id" items="${vahtkonds}" path="/vahtkonds" required="true" z="gWOjFzYIBwzTd2Asxil58mugGWE="/>
+        <field:select field="piiriloik" id="c_ee_itcollege_bg_entities_VahtkondPiiriloigul_piiriloik" itemLabel="kood" itemValue="id" items="${piiriloiks}" path="/piiriloiks" required="true" z="USYQ4zaUv+7d7Kl1vRtYPJgu1Yg="/>
         <field:input field="kommentaar" id="c_ee_itcollege_bg_entities_VahtkondPiiriloigul_kommentaar" required="true" z="fPUNPBHQubygpuCyUCa2k8QbU6Q="/>
         <field:datetime dateTimePattern="${vahtkondPiiriloigul_alates_date_format}" field="alates" id="c_ee_itcollege_bg_entities_VahtkondPiiriloigul_alates" required="true" z="9WtgUrUS/eRCI+3QXZCZi9YWvAw="/>
         <field:datetime dateTimePattern="${vahtkondPiiriloigul_kuni_date_format}" field="kuni" id="c_ee_itcollege_bg_entities_VahtkondPiiriloigul_kuni" required="true" z="MMBxbp+DK4TtY/0CRUUjd4gLxPQ="/>

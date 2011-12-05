@@ -3,8 +3,8 @@
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
     <form:update id="fu_ee_itcollege_bg_entities_Vahtkond" modelAttribute="vahtkond" path="/vahtkonds" versionField="Version" z="Vi9n7uqmPJs4f48ellrKM1sOBt0=">
-        <field:select field="piiripunkt" id="c_ee_itcollege_bg_entities_Vahtkond_piiripunkt" itemValue="id" items="${piiripunkts}" path="/piiripunkts" required="true" z="gxnZN/KwGb9lEvcwTwa7v4GjCVM="/>
-        <field:select field="vaeosa" id="c_ee_itcollege_bg_entities_Vahtkond_vaeosa" itemValue="id" items="${vaeosas}" path="/vaeosas" required="true" z="rMeSu9RnEJm1QYTnbU2SBbperBU="/>
+        <field:select field="piiripunkt" id="c_ee_itcollege_bg_entities_Vahtkond_piiripunkt" itemLabel="kood" itemValue="id" items="${piiripunkts}" path="/piiripunkts" required="true" z="gxnZN/KwGb9lEvcwTwa7v4GjCVM="/>
+        <field:select field="vaeosa" id="c_ee_itcollege_bg_entities_Vahtkond_vaeosa" itemLabel="kood" itemValue="id" items="${vaeosas}" path="/vaeosas" required="true" z="rMeSu9RnEJm1QYTnbU2SBbperBU="/>
         <field:input field="kood" id="c_ee_itcollege_bg_entities_Vahtkond_kood" max="20" required="true" z="bJAJTwflsxkyWHmpl8CUr6RTQnM="/>
         <field:input field="nimetus" id="c_ee_itcollege_bg_entities_Vahtkond_nimetus" required="true" z="2JFgmuN+0HifpBU/JH9OruLJaEc="/>
         <field:input field="kommentaar" id="c_ee_itcollege_bg_entities_Vahtkond_kommentaar" required="true" z="/dvMy8diwP7iWqtGcGgvccF/x8E="/>

@@ -4,9 +4,9 @@
     <jsp:output omit-xml-declaration="yes"/>
     <form:create id="fc_ee_itcollege_bg_entities_PiiriloiguHaldaja" modelAttribute="piiriloiguHaldaja" path="/piiriloiguhaldajas" render="${empty dependencies}" z="6grk8B5cmlvYrfDJQ7lPxc7tv3U=">
         <field:input field="kommentaar" id="c_ee_itcollege_bg_entities_PiiriloiguHaldaja_kommentaar" required="true" z="wtzapxLBmcQiCgV9A/mY8hREXBg="/>
-        <field:select field="piiriloik" id="c_ee_itcollege_bg_entities_PiiriloiguHaldaja_piiriloik" itemValue="id" items="${piiriloiks}" path="/piiriloiks" z="mDYj9+jhitOgpR3BSI2d0e6JdeU="/>
-        <field:select field="piiripunkt" id="c_ee_itcollege_bg_entities_PiiriloiguHaldaja_piiripunkt" itemValue="id" items="${piiripunkts}" path="/piiripunkts" required="true" z="GtVSHr5HVU2yYM0d61RHPtltvO0="/>
-        <field:select field="vaeosa" id="c_ee_itcollege_bg_entities_PiiriloiguHaldaja_vaeosa" itemValue="id" items="${vaeosas}" path="/vaeosas" required="true" z="GiGpY52jYGxzeRR/8W4mODULU1I="/>
+        <field:select field="piiriloik" id="c_ee_itcollege_bg_entities_PiiriloiguHaldaja_piiriloik" itemLabel="kood" itemValue="id" items="${piiriloiks}" path="/piiriloiks" z="mDYj9+jhitOgpR3BSI2d0e6JdeU="/>
+        <field:select field="piiripunkt" id="c_ee_itcollege_bg_entities_PiiriloiguHaldaja_piiripunkt" itemLabel="kood" itemValue="id" items="${piiripunkts}" path="/piiripunkts" required="true" z="GtVSHr5HVU2yYM0d61RHPtltvO0="/>
+        <field:select field="vaeosa" id="c_ee_itcollege_bg_entities_PiiriloiguHaldaja_vaeosa" itemLabel="kood" itemValue="id" items="${vaeosas}" path="/vaeosas" required="true" z="GiGpY52jYGxzeRR/8W4mODULU1I="/>
         <field:datetime dateTimePattern="${piiriloiguHaldaja_alates_date_format}" field="alates" id="c_ee_itcollege_bg_entities_PiiriloiguHaldaja_alates" required="true" z="A+019VJSg0ZMA4HUqZSs+lMwAnE="/>
         <field:datetime dateTimePattern="${piiriloiguHaldaja_kuni_date_format}" field="kuni" id="c_ee_itcollege_bg_entities_PiiriloiguHaldaja_kuni" required="true" z="mcL1IVnTMyDMjvlCsrZY/WPxXBo="/>
     </form:create>

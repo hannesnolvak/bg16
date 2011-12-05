@@ -15,7 +15,6 @@
             <field:select field="asukoht" id="c_ee_itcollege_bg_entities_Vaeosa_asukoht" itemLabel="nimetus" itemValue="id" items="${riigiadminyksuses}" path="/riigiadminyksuses" z="user-managed"/>
             <field:select field="parent" id="c_ee_itcollege_bg_entities_Vaeosa_ylemused" itemLabel="kood" itemValue="id" items="${vaeosas}" path="/vaeosas" z="n7uZMKjeUbYIatTryOAoLDLBjFE="/>
         </div>
-        <field:select field="ylemus" id="c_ee_itcollege_bg_entities_Vaeosa_ylemus" itemValue="id" items="${vaeosaalluvuses}" path="/vaeosaalluvuses" z="n7uZMKjeUbYIatTryOAoLDLBjFE="/>
     </form:create>
     <form:dependency dependencies="${dependencies}" id="d_ee_itcollege_bg_entities_Vaeosa" render="${not empty dependencies}" z="Ru0LwIaLy54q17ssz8Y98ZICQS8="/>
 </div>

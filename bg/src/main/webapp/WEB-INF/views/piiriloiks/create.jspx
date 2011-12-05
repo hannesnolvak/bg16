@@ -11,7 +11,7 @@
             <field:input field="nimetus" id="c_ee_itcollege_bg_entities_Piiriloik_nimetus" required="true" z="Mf5yzKqXU0bux6EXeeIQ4c5e9VU="/>
             <field:textarea field="kommentaar" id="c_ee_itcollege_bg_entities_Piiriloik_kommentaar" required="true" z="user-managed"/>
             <field:textarea field="GPS_koordinaadid" id="c_ee_itcollege_bg_entities_Piiriloik_GPS_koordinaadid" required="true" z="user-managed"/>
-            <field:select field="haldaja" id="c_ee_itcollege_bg_entities_Piiriloik_haldaja" itemValue="id" itemLabel="kood" items="${piiriloiguhaldajas}" path="/piiriloiguhaldajas" z="9W7ablZcIgcny/z/fEWf47327p0="/>
+            <field:select field="haldaja" id="c_ee_itcollege_bg_entities_Piiriloik_haldaja" itemValue="id" itemLabel="kommentaar" items="${piiriloiguhaldajas}" path="/piiriloiguhaldajas" z="9W7ablZcIgcny/z/fEWf47327p0="/>
         </div>
     </form:create>
     <form:dependency dependencies="${dependencies}" id="d_ee_itcollege_bg_entities_Piiriloik" render="${not empty dependencies}" z="+uOKndohKYGKov9/WoOgV9muEig="/>

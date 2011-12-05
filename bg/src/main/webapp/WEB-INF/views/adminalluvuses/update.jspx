@@ -3,8 +3,8 @@
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
     <form:update id="fu_ee_itcollege_bg_entities_AdminAlluvus" modelAttribute="adminAlluvus" path="/adminalluvuses" versionField="Version" z="+sepmkS2+3DnsPcq6yZeN8G+RfU=">
-        <field:select field="alluv" id="c_ee_itcollege_bg_entities_AdminAlluvus_alluv" itemValue="id" items="${riigiadminyksuses}" path="/riigiadminyksuses" z="fjkIZpq2hwXGzEcYiRKzflYOLUg="/>
-        <field:select field="ylem" id="c_ee_itcollege_bg_entities_AdminAlluvus_ylem" itemValue="id" items="${riigiadminyksuses}" path="/riigiadminyksuses" z="8m+ntal6fBY9P9tS4eNBdIkhuXc="/>
+        <field:select field="alluv" id="c_ee_itcollege_bg_entities_AdminAlluvus_alluv" itemLabel="kood" itemValue="id" items="${riigiadminyksuses}" path="/riigiadminyksuses" z="fjkIZpq2hwXGzEcYiRKzflYOLUg="/>
+        <field:select field="ylem" id="c_ee_itcollege_bg_entities_AdminAlluvus_ylem" itemLabel="kood" itemValue="id" items="${riigiadminyksuses}" path="/riigiadminyksuses" z="8m+ntal6fBY9P9tS4eNBdIkhuXc="/>
         <field:input field="kommentaar" id="c_ee_itcollege_bg_entities_AdminAlluvus_kommentaar" required="true" z="OXUwl2Ru4N6/q8vdvEkzwh3ak7s="/>
         <field:datetime dateTimePattern="${adminAlluvus_alates_date_format}" field="alates" id="c_ee_itcollege_bg_entities_AdminAlluvus_alates" required="true" z="kmNDEkBzAQcfl9Mj+rSipVhy3Sg="/>
         <field:datetime dateTimePattern="${adminAlluvus_kuni_date_format}" field="kuni" id="c_ee_itcollege_bg_entities_AdminAlluvus_kuni" required="true" z="ECH+yr7oh68ZGLOLRlNTsQwV8/c="/>

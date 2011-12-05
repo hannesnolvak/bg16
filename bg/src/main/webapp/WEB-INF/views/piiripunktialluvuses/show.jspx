@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_ee_itcollege_bg_entities_PiiripunktiAlluvus" object="${piiripunktialluvus}" path="/piiripunktialluvuses" z="V/pUMIhD1fn5L7rKz6Y59iyePns=">
+        <field:display field="vaeosa" id="s_ee_itcollege_bg_entities_PiiripunktiAlluvus_vaeosa" object="${piiripunktialluvus}" z="cBGSfa2g3KCT4S4r/9lwpq9sPHU="/>
+        <field:display field="piiripunkt" id="s_ee_itcollege_bg_entities_PiiripunktiAlluvus_piiripunkt" object="${piiripunktialluvus}" z="yizboGV5cr9x4Q5E8aZnGqLovdo="/>
+        <field:display field="kommentaar" id="s_ee_itcollege_bg_entities_PiiripunktiAlluvus_kommentaar" object="${piiripunktialluvus}" z="l/R3T6UeW/z2U3mZ/xmA5bDWVWI="/>
+        <field:display date="true" dateTimePattern="${piiripunktiAlluvus_alates_date_format}" field="alates" id="s_ee_itcollege_bg_entities_PiiripunktiAlluvus_alates" object="${piiripunktialluvus}" z="4yGNtSjSMwP43dupJm1Hb24CCEw="/>
+        <field:display date="true" dateTimePattern="${piiripunktiAlluvus_kuni_date_format}" field="kuni" id="s_ee_itcollege_bg_entities_PiiripunktiAlluvus_kuni" object="${piiripunktialluvus}" z="lTnRG+a3EDzirn900EPWxcgnzg8="/>
+    </page:show>
+</div>

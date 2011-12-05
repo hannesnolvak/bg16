@@ -3,15 +3,15 @@
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
     <div class="right-outer">
-        <field:table columnLabels="Vahtkonnad" columnMaxLengths="25" columnProperties="childName" columnTypes="string" data="${piiriloik.vahtkonnad}" id="c_ee_itcollege_bg_entities_Piiriloik_vahtkonnad" path="/vahtkonnadpiiriloigul" update="false" z="GGjsMXMO3vlCtWJN3WsKdFtPEOs="/>
-	</div>
+        <field:table columnLabels="Vahtkonnad" columnMaxLengths="25" columnProperties="childName" columnTypes="string" data="${piiriloik.vahtkonnad}" id="c_ee_itcollege_bg_entities_Piiriloik_vahtkonnad" path="/vahtkonnadpiiriloigul" update="false" z="user-managed"/>
+    </div>
     <form:create id="fc_ee_itcollege_bg_entities_Piiriloik" modelAttribute="piiriloik" path="/piiriloiks" render="${empty dependencies}" z="67GsCduKTww/dm7oA/6J4mk5FtY=">
-    	<div class="left">
-	        <field:input field="kood" id="c_ee_itcollege_bg_entities_Piiriloik_kood" max="20" required="true" z="AvnqAF4TXAC3uwubmgnYWKi76Kc="/>
-	        <field:input field="nimetus" id="c_ee_itcollege_bg_entities_Piiriloik_nimetus" required="true" z="Mf5yzKqXU0bux6EXeeIQ4c5e9VU="/>
-	        <field:textarea field="kommentaar" id="c_ee_itcollege_bg_entities_Piiriloik_kommentaar" required="true" z="sa7vykFCsdeEVW9q8aTWMo6AjQ0="/>
-        	<field:textarea field="GPS_koordinaadid" id="c_ee_itcollege_bg_entities_Piiriloik_GPS_koordinaadid" required="true" z="5UOAAPVXPYxpMlsPqBsNhxvZbf4="/>
-        	<field:select field="haldaja" id="c_ee_itcollege_bg_entities_Piiriloik_haldaja" itemValue="id" items="${piiriloiguhaldajas}" path="/piiriloiguhaldajas" z="9W7ablZcIgcny/z/fEWf47327p0="/>
+        <div class="left">
+            <field:input field="kood" id="c_ee_itcollege_bg_entities_Piiriloik_kood" max="20" required="true" z="AvnqAF4TXAC3uwubmgnYWKi76Kc="/>
+            <field:input field="nimetus" id="c_ee_itcollege_bg_entities_Piiriloik_nimetus" required="true" z="Mf5yzKqXU0bux6EXeeIQ4c5e9VU="/>
+            <field:textarea field="kommentaar" id="c_ee_itcollege_bg_entities_Piiriloik_kommentaar" required="true" z="user-managed"/>
+            <field:textarea field="GPS_koordinaadid" id="c_ee_itcollege_bg_entities_Piiriloik_GPS_koordinaadid" required="true" z="user-managed"/>
+            <field:select field="haldaja" id="c_ee_itcollege_bg_entities_Piiriloik_haldaja" itemValue="id" items="${piiriloiguhaldajas}" path="/piiriloiguhaldajas" z="9W7ablZcIgcny/z/fEWf47327p0="/>
         </div>
     </form:create>
     <form:dependency dependencies="${dependencies}" id="d_ee_itcollege_bg_entities_Piiriloik" render="${not empty dependencies}" z="+uOKndohKYGKov9/WoOgV9muEig="/>

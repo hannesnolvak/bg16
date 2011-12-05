@@ -1,5 +1,6 @@
 package ee.itcollege.bg.entities;
 
+import java.util.Date;
 import java.util.List;
 import java.util.Set;
 
@@ -38,5 +39,17 @@ public class Piiriloik extends BaseEntity {
 
     public static List<Piiriloik> find(String vaeosa, String kp) {
         return entityManager().createQuery("SELECT o FROM Piiriloik o WHERE EXISTS (SELECT 1 FROM PiiripunktiAlluvus a WHERE a.piiripunkt = o AND a.vaeosa = :vid AND avatud >= :kp AND suletud <= :kp)", Piiriloik.class).setParameter("vid", vaeosa).setParameter("kp", kp).getResultList();
+    }
+    
+    public void setHaldaja(PiiriloiguHaldaja h)
+    {
+    	if(haldaja != null)
+    	{
+    		haldaja.setKuni(new Date());
+    	}
+    	
+    	h.setAlates(new Date());
+    	
+    	haldaja = h;
     }
 }

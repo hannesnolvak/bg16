@@ -14,10 +14,6 @@ privileged aspect Piiriloik_Roo_JavaBean {
         return this.haldaja;
     }
     
-    public void Piiriloik.setHaldaja(PiiriloiguHaldaja haldaja) {
-        this.haldaja = haldaja;
-    }
-    
     public Set<VahtkondPiiriloigul> Piiriloik.getVahtkonnad() {
         return this.vahtkonnad;
     }

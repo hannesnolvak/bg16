@@ -28,7 +28,7 @@ public class Piiripunkt extends BaseEntity {
 	@NotNull
 	@ManyToOne
 	private Piiriloik piiriloik;
-	
+
 	@ManyToOne
 	private Vaeosa allub;
 	

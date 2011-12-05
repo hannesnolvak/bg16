@@ -3,7 +3,7 @@
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
     <div class="right-outer" style="margin-top: 100px;">
-        <field:table columnLabels="Vahtkonnad" columnMaxLengths="25" columnProperties="childName" columnTypes="string" data="${piiripunkt.vahtkonnad}" id="c_ee_itcollege_bg_entities_Piiripunkt_vahtkonnad" path="/vahtkondpiiriloigul" update="false" z="GGjsMXMO3vlCtWJN3WsKdFtPEOs="/>
+        <field:table columnLabels="Vahtkonnad" columnMaxLengths="25" columnProperties="childName" columnTypes="string" data="${piiripunkt.vahtkonnad}" id="c_ee_itcollege_bg_entities_Piiripunkt_vahtkonnad" path="/vahtkondpiiriloiguls" update="false" z="GGjsMXMO3vlCtWJN3WsKdFtPEOs="/>
 	</div>
     <form:create id="fc_ee_itcollege_bg_entities_Piiripunkt" modelAttribute="piiripunkt" path="/piiripunkts" render="${empty dependencies}" z="qEpxM4dekueYdSShfr+tUwB3kPM=">
         <div class="left">

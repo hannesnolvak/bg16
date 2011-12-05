@@ -7,6 +7,7 @@ import ee.itcollege.bg.entities.AdminAlluvus;
 import ee.itcollege.bg.entities.PiiriloiguHaldaja;
 import ee.itcollege.bg.entities.Piiriloik;
 import ee.itcollege.bg.entities.Piiripunkt;
+import ee.itcollege.bg.entities.PiiripunktiAlluvus;
 import ee.itcollege.bg.entities.RiigiAdminYksus;
 import ee.itcollege.bg.entities.RiigiAdminYksuseLiik;
 import ee.itcollege.bg.entities.Vaeosa;
@@ -24,6 +25,7 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
         registry.addConverter(new PiiriloiguHaldajaConverter());
         registry.addConverter(new PiiriloikConverter());
         registry.addConverter(new PiiripunktConverter());
+        registry.addConverter(new PiiripunktiAlluvusConverter());
         registry.addConverter(new RiigiAdminYksusConverter());
         registry.addConverter(new RiigiAdminYksuseLiikConverter());
         registry.addConverter(new VaeosaConverter());
@@ -61,6 +63,13 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
     static class ee.itcollege.bg.web.ApplicationConversionServiceFactoryBean.PiiripunktConverter implements Converter<Piiripunkt, String> {
         public String convert(Piiripunkt piiripunkt) {
             return new StringBuilder().append(piiripunkt.getAvaja()).append(" ").append(piiripunkt.getMuutja()).append(" ").append(piiripunkt.getSulgeja()).append(" ").append(piiripunkt.getAvatud()).toString();
+        }
+        
+    }
+    
+    static class ee.itcollege.bg.web.ApplicationConversionServiceFactoryBean.PiiripunktiAlluvusConverter implements Converter<PiiripunktiAlluvus, String> {
+        public String convert(PiiripunktiAlluvus piiripunktiAlluvus) {
+            return new StringBuilder().append(piiripunktiAlluvus.getKommentaar()).append(" ").append(piiripunktiAlluvus.getAlates()).append(" ").append(piiripunktiAlluvus.getKuni()).toString();
         }
         
     }

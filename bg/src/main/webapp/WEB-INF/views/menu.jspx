@@ -46,5 +46,9 @@
             <menu:item id="i_riigiadminyksuseliik_new" messageCode="global_menu_new" url="/riigiadminyksuseliiks?form" z="Z9mBPeH04+JcPrMWRsPwR3/KoTI="/>
             <menu:item id="i_riigiadminyksuseliik_list" messageCode="global_menu_list" url="/riigiadminyksuseliiks?page=1&amp;size=${empty param.size ? 10 : param.size}" z="Ql4kfRaFULULl8Bu2tOAiFCH4f4="/>
         </menu:category>
+        <menu:category id="c_piiripunktialluvus" z="q5bdjAC2/XSSAVXBsVRlOeNtJ8k=">
+            <menu:item id="i_piiripunktialluvus_new" messageCode="global_menu_new" url="/piiripunktialluvuses?form" z="8nqH1r02LupEbqAUSXqXKHsB++g="/>
+            <menu:item id="i_piiripunktialluvus_list" messageCode="global_menu_list" url="/piiripunktialluvuses?page=1&amp;size=${empty param.size ? 10 : param.size}" z="HZ2lBjOjYtvHlGp42ZGu6YYOWYQ="/>
+        </menu:category>
     </menu:menu>
 </div>
